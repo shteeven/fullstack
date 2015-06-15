@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a756eb5b-39c4-4bd8-9222-e20e5271d6cd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tournament/test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tournament/tournamentdb.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/forum.py" afterPath="$PROJECT_DIR$/forum/forum.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/forumdb.py" afterPath="$PROJECT_DIR$/forum/forumdb.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournament.py" afterPath="$PROJECT_DIR$/tournament/tournament.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournament.sql" afterPath="$PROJECT_DIR$/tournament/tournament.sql" />
+    </list>
+    <ignored path="vagrant.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/vagrant$tournament.coverage" NAME="tournament Coverage Results" MODIFIED="1434359755514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
+    <SUITE FILE_PATH="coverage/vagrant$test.coverage" NAME="test Coverage Results" MODIFIED="1434373635502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
+    <SUITE FILE_PATH="coverage/vagrant$forum.coverage" NAME="forum Coverage Results" MODIFIED="1434375677523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/forum" />
+    <SUITE FILE_PATH="coverage/vagrant$tournamentdb.coverage" NAME="tournamentdb Coverage Results" MODIFIED="1434373911178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="true" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="vagrant" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="vertical" split-proportion="0.48907104">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="forum.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/forum/forum.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="1.7067307">
+                  <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tournament.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tournament.sql" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tournament/tournament.sql">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-0.0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tournament_test.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tournament/tournament_test.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="tournament.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tournament/test.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tournamentdb.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tournament/tournamentdb.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-0.29545453">
+                  <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                  <folding>
+                    <marker date="1434376861000" expanded="true" signature="1219:1261" placeholder="INSERT INTO ..." />
+                    <marker date="1434376861000" expanded="true" signature="2758:2802" placeholder="SELECT * FRO..matches..." />
+                    <marker date="1434376861000" expanded="true" signature="2820:2864" placeholder="SELECT * FRO..matches..." />
+                    <marker date="1434376861000" expanded="true" signature="3006:3050" placeholder="SELECT * FRO..matches..." />
+                    <marker date="1434376861000" expanded="true" signature="3257:3278" placeholder="SELECT * FRO..matches..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/47ece254-3f2e-484f-a1f6-9bd1b9420c9d/console.sql" />
+        <option value="$PROJECT_DIR$/forum/forum.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7c5f5f39-f236-4177-8653-9d283f9ac060/console.sql" />
+        <option value="$PROJECT_DIR$/tournament/tournament_test.py" />
+        <option value="$PROJECT_DIR$/tournament/tournament.sql" />
+        <option value="$PROJECT_DIR$/tournament/test.py" />
+        <option value="$PROJECT_DIR$/forum/forum.py" />
+        <option value="$PROJECT_DIR$/forum/forumdb.py" />
+        <option value="$PROJECT_DIR$/tournament/tournamentdb.py" />
+        <option value="$PROJECT_DIR$/tournament/tournament.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Buildout</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vagrant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vagrant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vagrant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vagrant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vagrant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tournament" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vagrant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vagrant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vagrant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vagrant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".vagrant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tournament/tournament.sql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="true" />
+    <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RunManager" selected="Python.forum">
+    <configuration default="false" name="forum" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/forum" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/forum/forum.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="tournament" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tournament" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tournament/tournament.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tournament" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tournament/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="tournamentdb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tournament" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tournament/tournamentdb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vagrant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Python.forum" />
+      <item index="1" class="java.lang.String" itemvalue="Python.tournament" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.tournamentdb" />
+    </list>
+    <recent_temporary>
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.forum" />
+        <item index="1" class="java.lang.String" itemvalue="Python.tournamentdb" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.tournament" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a756eb5b-39c4-4bd8-9222-e20e5271d6cd" name="Default" comment="" />
+      <created>1433910674529</created>
+      <option name="number" value="Default" />
+      <updated>1433910674529</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.509693" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33013698" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20759289" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32786885" sideWeight="0.49030694" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/forum/forum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forumdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/111d6d71-7260-4c18-bc56-f924541efd96/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forumdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forumdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forumdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forumdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.vagrant/machines/default/virtualbox/private_key">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/psycopg2-2.6-py2.7-macosx-10.6-intel.egg/psycopg2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/47ece254-3f2e-484f-a1f6-9bd1b9420c9d/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vagrantfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/80d85ab5-b349-4f34-b122-43f630d3c827/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/7c5f5f39-f236-4177-8653-9d283f9ac060">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>7c5f5f39-f236-4177-8653-9d283f9ac060</OriginalElement>
+          <nodes>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_ts_parser</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_cast</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_user_mappings</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_attrdef</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stats</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_namespace</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_description</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_available_extensions</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_sys_tables</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_conversion</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_xact_user_functions</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_language</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_prepared_xacts</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_xact_sys_tables</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_user_mapping</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_user_indexes</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_archiver</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_xact_all_tables</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_timezone_names</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_user</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_settings</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_default_acl</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_activity</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_opclass</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_statio_all_tables</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_ts_dict</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_statio_sys_tables</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_attribute</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_shdescription</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_user_functions</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_database</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_seclabels</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_cursors</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_statistic</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_amproc</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_foreign_table</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_foreign_data_wrapper</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_trigger</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_range</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_all_indexes</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_index</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_timezone_abbrevs</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_roles</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_replication</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_views</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_statio_user_indexes</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_largeobject</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_group</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_event_trigger</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_statio_user_sequences</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_aggregate</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_am</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_locks</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_amop</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_pltemplate</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_prepared_statements</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_constraint</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_depend</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_sys_indexes</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_authid</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_indexes</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_database</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_enum</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_statio_all_sequences</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_shadow</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_foreign_server</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_statio_sys_indexes</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_proc</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_type</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_available_extension_versions</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_rewrite</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_statio_all_indexes</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_bgwriter</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_seclabel</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_collation</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_operator</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_inherits</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_largeobject_metadata</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_all_tables</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_database_conflicts</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_shdepend</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_rules</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_ts_config_map</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_extension</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_auth_members</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_xact_user_tables</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_ts_config</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_tables</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_shseclabel</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_opfamily</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_db_role_setting</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_statio_user_tables</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_class</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_replication_slots</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_ts_template</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_matviews</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_tablespace</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_statio_sys_sequences</node>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_user_tables</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.46252555937022344" x="460.0" y="416.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_xact_sys_tables">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_xact_sys_tables</OriginalElement>
+          <nodes>
+            <node x="" y="">7c5f5f39-f236-4177-8653-9d283f9ac060.table:pg_catalog.pg_stat_xact_sys_tables</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="154.0" y="116.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/e3424bf0-c264-4b2f-8fc1-cd455e201377">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>e3424bf0-c264-4b2f-8fc1-cd455e201377</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="289.0" y="218.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7c5f5f39-f236-4177-8653-9d283f9ac060/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2abc1a9d/111d6d71-7260-4c18-bc56-f924541efd96/.pg_catalog.pg_stats">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/111d6d71-7260-4c18-bc56-f924541efd96/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pg_config.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3448276">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06666667">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournamentdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.29545453">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <marker date="1434376861000" expanded="true" signature="1219:1261" placeholder="INSERT INTO ..." />
+            <marker date="1434376861000" expanded="true" signature="2758:2802" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434376861000" expanded="true" signature="2820:2864" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434376861000" expanded="true" signature="3006:3050" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434376861000" expanded="true" signature="3257:3278" placeholder="SELECT * FRO..matches..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forumdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2355769">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding>
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7067307">
+          <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
