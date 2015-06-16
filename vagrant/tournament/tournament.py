@@ -12,6 +12,44 @@ import urlparse
 from wsgiref.simple_server import make_server
 from wsgiref import util
 
+# HTML template for the forum page
+HTML_WRAP = '''\
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DB Forum</title>
+    <style>
+      h1, form { text-align: center; }
+      textarea { width: 400px; height: 100px; }
+      div.post { border: 1px solid #999;
+                 padding: 10px 10px;
+                 margin: 10px 20%%; }
+                 hr.postbound { width: 50%%; }
+      em.date { color: #999 }
+    </style>
+  </head>
+  <body>
+    <h1>DB Forum</h1>
+    <form method=post action="/post">
+      <div><textarea id="content" name="content"></textarea></div>
+      <div><button id="go" type="submit">Post message</button></div>
+    </form>
+    <form method=deleteplayer action="/deleteplayers">
+      <div><textarea id="nothing" name="nothing"></textarea></div>
+      <div><button id="go2" type="submit">Delete Players</button></div>
+    </form>
+    <!-- post content will go here -->
+%s
+  </body>
+</html>
+'''
+
+# HTML template for an individual comment
+POST = '''\
+    <div class=post><em class=date>%(id)s</em><br>%(name)s</div>
+'''
+
+
 # Request handler for main page
 def View(env, resp):
     """
@@ -19,11 +57,11 @@ def View(env, resp):
     It displays the submission form and the previously posted messages.
     """
     # get posts from database
-    posts = tournamentdb.get_all_tables()
+    posts = tournamentdb.get_all_players()
     # send results
     headers = [('Content-type', 'text/html')]
     resp('200 OK', headers)
-    # return [HTML_WRAP % ''.join(POST % p for p in posts)]
+    return [HTML_WRAP % ''.join(POST % p for p in posts)]
 
 ## Request handler for posting - inserts to database
 def Post(env, resp):
@@ -44,6 +82,7 @@ def Post(env, resp):
         content = content.strip()
         if content:
             # Save it in the database
+            print(content)
             tournamentdb.registerPlayer(content)
     # 302 redirect back to the main page
     headers = [('Location', '/'),
@@ -51,9 +90,27 @@ def Post(env, resp):
     resp('302 REDIRECT', headers)
     return ['Redirecting']
 
+
+## Request handler for posting - inserts to database
+def DeletePlayers(env, resp):
+    """DeletePlayers handles a submission of the forum's form.
+
+    The message the user posted is saved in the database, then it sends a 302
+    Redirect back to the main page so the user can see their new post.
+    """
+    # delete players
+    tournamentdb.deletePlayers()
+    # 302 redirect back to the main page
+    headers = [('Location', '/'),
+               ('Content-type', 'text/plain')]
+    resp('302 REDIRECT', headers)
+    return ['Redirecting']
+
+
 # Dispatch table - maps URL prefixes to request handlers
 DISPATCH = {'': View,
             'post': Post,
+            'deleteplayers': DeletePlayers
             }
 
 

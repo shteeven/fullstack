@@ -17,7 +17,6 @@ def get_all_posts():  # Database connection
     c.execute("SELECT player_id, match_id FROM matches ORDER BY player_id DESC")
     posts = ({'content': str(row[1]), 'time': str(row[0])}
              for row in c.fetchall())
-    DB.close()
     return posts
 
 # Add a post to the database.
@@ -40,7 +39,7 @@ def truncate_posts():
     Removes all entries from posts table
     :return:
     """
-    DB = psycopg2.connect("dbname=tournament")
+    DB = psycopg2.connect("dbname=forum")
     c = DB.cursor()
     c.execute("TRUNCATE posts")
     DB.commit()

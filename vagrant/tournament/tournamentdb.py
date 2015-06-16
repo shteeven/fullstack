@@ -29,6 +29,11 @@ def deleteMatches():
 
 def deletePlayers():
     """Remove all the player records from the database."""
+    DB = psycopg2.connect("dbname=tournament")
+    c = DB.cursor()
+    c.execute("TRUNCATE players")
+    DB.commit()
+    DB.close()
 
 
 def countPlayers():
@@ -46,7 +51,8 @@ def registerPlayer(name):
     """
     DB = connect()
     c = DB.cursor()
-    c.execute("INSERT INTO players (name) VALUES ('name')")
+    c.execute("INSERT INTO players VALUES (DEFAULT, %s)", (name,))
+    DB.commit()
     DB.close()
 
 
@@ -114,3 +120,15 @@ def get_all_tables():
     for i in c.fetchall():
         print(i)
     DB.close()
+
+
+def get_all_players():
+    DB = connect()
+    c = DB.cursor()
+    c.execute("SELECT * FROM players")
+    players = ({'id': str(row[1]), 'name': str(row[0])} for row in c.fetchall())
+    print("here")
+    c.execute("SELECT * FROM players")
+    print(c.fetchall())
+    DB.close()
+    return players

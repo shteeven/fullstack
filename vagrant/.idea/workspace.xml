@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a756eb5b-39c4-4bd8-9222-e20e5271d6cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tournament/test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tournament/tournamentdb.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/forum.py" afterPath="$PROJECT_DIR$/forum/forum.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/forumdb.py" afterPath="$PROJECT_DIR$/forum/forumdb.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournament.py" afterPath="$PROJECT_DIR$/tournament/tournament.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournament.sql" afterPath="$PROJECT_DIR$/tournament/tournament.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournamentdb.py" afterPath="$PROJECT_DIR$/tournament/tournamentdb.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vagrant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +19,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/vagrant$tournament.coverage" NAME="tournament Coverage Results" MODIFIED="1434359755514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
+    <SUITE FILE_PATH="coverage/vagrant$tournament.coverage" NAME="tournament Coverage Results" MODIFIED="1434415800416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$test.coverage" NAME="test Coverage Results" MODIFIED="1434373635502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$forum.coverage" NAME="forum Coverage Results" MODIFIED="1434375677523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/forum" />
     <SUITE FILE_PATH="coverage/vagrant$tournamentdb.coverage" NAME="tournamentdb Coverage Results" MODIFIED="1434373911178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
@@ -49,41 +47,21 @@
     <splitter split-orientation="vertical" split-proportion="0.48907104">
       <split-first>
         <leaf>
-          <file leaf-file-name="forum.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="forum.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/forum/forum.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.7067307">
-                  <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tournament.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="tournament.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tournament.sql" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tournament/tournament.sql">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="32" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tournament_test.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tournament/tournament_test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="19" />
+                <state vertical-scroll-proportion="2.0192308">
+                  <caret line="112" column="42" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
@@ -93,37 +71,33 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="tournament.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tournament/test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="tournamentdb.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tournament/tournamentdb.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.29545453">
-                  <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                <state vertical-scroll-proportion="-0.6199095">
+                  <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
                   <folding>
-                    <marker date="1434376861000" expanded="true" signature="1219:1261" placeholder="INSERT INTO ..." />
-                    <marker date="1434376861000" expanded="true" signature="2758:2802" placeholder="SELECT * FRO..matches..." />
-                    <marker date="1434376861000" expanded="true" signature="2820:2864" placeholder="SELECT * FRO..matches..." />
-                    <marker date="1434376861000" expanded="true" signature="3006:3050" placeholder="SELECT * FRO..matches..." />
-                    <marker date="1434376861000" expanded="true" signature="3257:3278" placeholder="SELECT * FRO..matches..." />
+                    <marker date="1434415772000" expanded="true" signature="1351:1391" placeholder="INSERT INTO ..." />
+                    <marker date="1434415772000" expanded="true" signature="2913:2957" placeholder="SELECT * FRO..matches..." />
+                    <marker date="1434415772000" expanded="true" signature="2975:3019" placeholder="SELECT * FRO..matches..." />
+                    <marker date="1434415772000" expanded="true" signature="3161:3205" placeholder="SELECT * FRO..matches..." />
+                    <marker date="1434415772000" expanded="true" signature="3412:3433" placeholder="SELECT * FRO..matches..." />
+                    <marker date="1434415772000" expanded="true" signature="3574:3587" placeholder="SELECT * FRO..." />
+                    <marker date="1434415772000" expanded="true" signature="3574:3588" placeholder="SELECT * FRO..matches..." />
+                    <marker date="1434415772000" expanded="true" signature="3574:3595" placeholder="SELECT * FRO..players..." />
+                    <marker date="1434415772000" expanded="true" signature="3712:3733" placeholder="SELECT * FRO..players..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="forumdb.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/forum/forumdb.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+                  <folding>
+                    <marker date="1434415772000" expanded="true" signature="300:363" placeholder="SELECT playe..matches..." />
                   </folding>
                 </state>
               </provider>
@@ -213,7 +187,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -276,6 +249,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,11 +257,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Python.forum">
+  <component name="RunManager" selected="Python.tournament">
     <configuration default="false" name="forum" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -556,10 +530,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.forum" />
-        <item index="1" class="java.lang.String" itemvalue="Python.tournamentdb" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.tournament" />
+        <item index="0" class="java.lang.String" itemvalue="Python.tournament" />
+        <item index="1" class="java.lang.String" itemvalue="Python.forum" />
+        <item index="2" class="java.lang.String" itemvalue="Python.tournamentdb" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -590,7 +564,6 @@
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.509693" order="7" side_tool="true" content_ui="tabs" />
@@ -599,15 +572,16 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20759289" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21405493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32786885" sideWeight="0.49030694" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32650274" sideWeight="0.49030694" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -632,6 +606,84 @@
     <entry file="file://$PROJECT_DIR$/forum/forum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournamentdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1434415772000" expanded="true" signature="1351:1391" placeholder="INSERT INTO ..." />
+            <marker date="1434415772000" expanded="true" signature="2913:2957" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="2975:3019" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3161:3205" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3412:3433" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3574:3587" placeholder="SELECT * FRO..." />
+            <marker date="1434415772000" expanded="true" signature="3574:3588" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3574:3595" placeholder="SELECT * FRO..players..." />
+            <marker date="1434415772000" expanded="true" signature="3712:3733" placeholder="SELECT * FRO..players..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forumdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <marker date="1434415772000" expanded="true" signature="300:363" placeholder="SELECT playe..matches..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournamentdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1434415772000" expanded="true" signature="1351:1391" placeholder="INSERT INTO ..." />
+            <marker date="1434415772000" expanded="true" signature="2913:2957" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="2975:3019" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3161:3205" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3412:3433" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3574:3587" placeholder="SELECT * FRO..." />
+            <marker date="1434415772000" expanded="true" signature="3574:3588" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3574:3595" placeholder="SELECT * FRO..players..." />
+            <marker date="1434415772000" expanded="true" signature="3712:3733" placeholder="SELECT * FRO..players..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/forum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
           <folding />
         </state>
@@ -642,10 +694,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+            <marker date="1434415772000" expanded="true" signature="300:363" placeholder="SELECT playe..matches..." />
           </folding>
         </state>
       </provider>
@@ -662,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -687,10 +734,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+            <marker date="1434415772000" expanded="true" signature="300:363" placeholder="SELECT playe..matches..." />
           </folding>
         </state>
       </provider>
@@ -707,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -732,10 +774,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding>
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+            <marker date="1434415772000" expanded="true" signature="300:363" placeholder="SELECT playe..matches..." />
           </folding>
         </state>
       </provider>
@@ -744,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,10 +799,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+            <marker date="1434415772000" expanded="true" signature="300:363" placeholder="SELECT playe..matches..." />
           </folding>
         </state>
       </provider>
@@ -773,7 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,10 +824,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+            <marker date="1434415772000" expanded="true" signature="300:363" placeholder="SELECT playe..matches..." />
           </folding>
         </state>
       </provider>
@@ -802,7 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,14 +1043,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/2abc1a9d/111d6d71-7260-4c18-bc56-f924541efd96/.pg_catalog.pg_stats">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1028,7 +1058,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1043,7 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06666667">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,7 +1079,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,7 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,52 +1093,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tournament/tournamentdb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.29545453">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <marker date="1434376861000" expanded="true" signature="1219:1261" placeholder="INSERT INTO ..." />
-            <marker date="1434376861000" expanded="true" signature="2758:2802" placeholder="SELECT * FRO..matches..." />
-            <marker date="1434376861000" expanded="true" signature="2820:2864" placeholder="SELECT * FRO..matches..." />
-            <marker date="1434376861000" expanded="true" signature="3006:3050" placeholder="SELECT * FRO..matches..." />
-            <marker date="1434376861000" expanded="true" signature="3257:3278" placeholder="SELECT * FRO..matches..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forum/forumdb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2355769">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
           <folding>
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="SELECT time,..posts..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1434375612000" expanded="true" signature="-1:-1" placeholder="TRUNCATE pos..." />
+            <marker date="1434415772000" expanded="true" signature="300:363" placeholder="SELECT playe..matches..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournamentdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6199095">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding>
+            <marker date="1434415772000" expanded="true" signature="1351:1391" placeholder="INSERT INTO ..." />
+            <marker date="1434415772000" expanded="true" signature="2913:2957" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="2975:3019" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3161:3205" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3412:3433" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3574:3587" placeholder="SELECT * FRO..." />
+            <marker date="1434415772000" expanded="true" signature="3574:3588" placeholder="SELECT * FRO..matches..." />
+            <marker date="1434415772000" expanded="true" signature="3574:3595" placeholder="SELECT * FRO..players..." />
+            <marker date="1434415772000" expanded="true" signature="3712:3733" placeholder="SELECT * FRO..players..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forum/forum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7067307">
-          <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0192308">
+          <caret line="112" column="42" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
