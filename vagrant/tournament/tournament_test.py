@@ -2,7 +2,7 @@
 #
 # Test cases for tournament.py
 
-from tournament import *
+from tournamentdb import *
 
 def testDeleteMatches():
     deleteMatches()

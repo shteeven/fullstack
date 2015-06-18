@@ -34,10 +34,9 @@ HTML_WRAP = '''\
       <div><textarea id="content" name="content"></textarea></div>
       <div><button id="go" type="submit">Post message</button></div>
     </form>
-    <form method=deleteplayer action="/deleteplayers">
-      <div><textarea id="nothing" name="nothing"></textarea></div>
-      <div><button id="go2" type="submit">Delete Players</button></div>
-    </form>
+    <button onclick="location.href = '/deleteplayers'">Delete Player</button>
+    <button onclick="location.href = '/deletematches'">Delete Matches</button>
+
     <!-- post content will go here -->
 %s
   </body>
