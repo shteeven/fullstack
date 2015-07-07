@@ -125,15 +125,18 @@ def testPairings():
     print "8. After one match, players with one win are paired."
 
 
+def runTestMatch():
+    a = swissPairings()
+    for i in a:
+        print(i)
+        reportMatch(3, i[0], i[2])
+    for i in playerStandings():
+        print(i)
+
+
 if __name__ == '__main__':
-    testDeleteMatches()
-    testDelete()
-    testCount()
-    testRegister()
-    testRegisterCountDelete()
-    testStandingsBeforeMatches()
-    testReportMatches()
-    testPairings()
+    runTestMatch()
+    #deleteMatches()
     print "Success!  All tests pass!"
 
 

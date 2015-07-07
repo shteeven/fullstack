@@ -19,7 +19,7 @@ HTML_WRAP = '''\
   <head>
     <title>DB Forum</title>
     <style>
-      h1, form { text-align: center; }
+      h1, form, button { text-align: center; }
       textarea { width: 400px; height: 100px; }
       div.post { border: 1px solid #999;
                  padding: 10px 10px;
@@ -31,7 +31,7 @@ HTML_WRAP = '''\
   <body>
     <h1>DB Forum</h1>
     <form method=post action="/post">
-      <div><textarea id="content" name="content"></textarea></div>
+      <div><input id="content" name="content"></input></div>
       <div><button id="go" type="submit">Post message</button></div>
     </form>
     <button onclick="location.href = '/deleteplayers'">Delete Player</button>
@@ -57,10 +57,14 @@ def View(env, resp):
     """
     # get posts from database
     posts = tournamentdb.get_all_players()
+    posts_map = []
+    for p in posts:
+        posts_map.append({'id': p[0], 'name': p[1]})
+    print(posts)
     # send results
     headers = [('Content-type', 'text/html')]
     resp('200 OK', headers)
-    return [HTML_WRAP % ''.join(POST % p for p in posts)]
+    return [HTML_WRAP % ''.join(POST % p for p in posts_map)]
 
 ## Request handler for posting - inserts to database
 def Post(env, resp):

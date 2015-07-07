@@ -56,7 +56,9 @@ def check(engaged):
     return True
 
 def matchmaker():
+    print(guys)
     guysfree = guys[:]
+    print(guysfree)
     engaged  = {}
     guyprefers2 = copy.deepcopy(guyprefers)
     galprefers2 = copy.deepcopy(galprefers)

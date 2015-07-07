@@ -24,7 +24,6 @@ def deleteMatches():
     DB.close()
 
 
-
 def deletePlayers():
     """Remove all the player records from the database."""
     DB = psycopg2.connect("dbname=tournament")
@@ -84,7 +83,8 @@ def playerStandings():
     DB.close()
     return results
 
-def reportMatch(winner, loser=None):
+
+def reportMatch(match_round, winner, loser=None, draw=None):
     """Records the outcome of a single match between two players.
 
     Args:
@@ -93,9 +93,16 @@ def reportMatch(winner, loser=None):
     """
     DB = connect()
     c = DB.cursor()
-    if loser:  # Do not update record of loser if 'bye'
-        c.execute("UPDATE players SET matches = matches + 1 WHERE id = %s;", (loser,))
-    c.execute("UPDATE players SET wins = wins + 1, matches = matches + 1 WHERE id = %s;", (winner,))
+    if not draw:  # set records of match both in match table and player table
+        c.execute("UPDATE players SET matches = (matches + 1) WHERE id = %s;", (loser,))  # update loser record
+        c.execute("UPDATE players SET wins = (wins + 1), matches = (matches + 1) WHERE id = %s;", (winner,))  # update loser record
+        c.execute("INSERT INTO matches (match_id, player_id, opponent_id, match_outcome) VALUES (%s, %s, %s, %s)", (match_round, winner, loser, 3))  # update winner tourney card
+        c.execute("INSERT INTO matches (match_id, player_id, opponent_id, match_outcome) VALUES (%s, %s, %s, %s)", (match_round, loser, winner, 0))  # update loser tourney card
+    else:  # set records with 'draw' points
+        c.execute("UPDATE players SET wins = (wins + .5), matches = (matches + 1) WHERE id = %s;", (loser,))  # update player 1 record
+        c.execute("UPDATE players SET wins = (wins + .5), matches = (matches + 1) WHERE id = %s;", (winner,))  # update player 2 record
+        c.execute("INSERT INTO matches (match_id, player_id, opponent_id, match_outcome) VALUES (%s, %s, %s, %s)", (match_round, winner, loser, 1))  # update player 1 tourney card
+        c.execute("INSERT INTO matches (match_id, player_id, opponent_id, match_outcome) VALUES (%s, %s, %s, %s)", (match_round, loser, winner, 1))  # update player 2 tourney card
     DB.commit()
     DB.close()
 
@@ -120,66 +127,30 @@ def swissPairings():
     c.execute("SELECT * FROM players ORDER BY wins DESC")
     pairs = []
     pair = None
-    for i in c.fetchall():
+    a = c.fetchall()
+    for i in a:
         if pair:
             pair = pair + (i[0],) + (i[1],)
             pairs.append(pair)
             pair = None
         else:
             pair = (i[0], i[1])
-            print(pair)
     if pair:  # Is true if odd number of players
-        pair = pair + (9999999999,) + ('BYE',)
+        pair = pair + (9999,) + ('BYE',)
         pairs.append(pair)
     DB.close()
     return pairs
 
 
-
-def get_all_tables():
-    DB = connect()
-    c = DB.cursor()
-    c.execute("SELECT * FROM matches")
-    for i in c.fetchall():
-        print(i)
-    DB.close()
-
-
 def get_all_players():
     DB = connect()
     c = DB.cursor()
-    c.execute("SELECT * FROM players")
-    players = ({'id': str(row[1]), 'name': str(row[0])} for row in c.fetchall())
-    print("here")
-    c.execute("SELECT * FROM players")
-    print(c.fetchall())
-    DB.close()
-    return players
-
-
-def get_top_5():
-    DB = connect()
-    c = DB.cursor()
-    # Select every other player from table ordered by wins //EVENs
-    c.execute("""SELECT id, name, wins FROM (
-                SELECT id, name, wins, ROW_NUMBER() OVER(ORDER BY wins DESC) AS rownum FROM players
-                ) t WHERE t.rownum % 2 = 0""")
-
-    # Select every other player from table ordered by wins //ODDs
-    c.execute("""SELECT id, name, wins FROM (
-                SELECT id, name, wins, ROW_NUMBER() OVER(ORDER BY wins DESC) AS rownum FROM players
-                ) t WHERE t.rownum % 2 = 1""")
-    # players = ({'id': str(row[1]), 'name': str(row[0])} for row in c.fetchall())
-
-    # c.execute("SELECT * FROM information_schema.columns WHERE table_name   = 'players_order'")
-    players = []
+    c.execute("SELECT id, name, wins, matches FROM players ORDER BY wins DESC")
+    results = []
     for i in c.fetchall():
-        players.append(i)
+        results.append(i)
+    DB.commit()
     DB.close()
-    return players
+    return results
 
 
-print(countPlayers())
-
-# print(get_top_5())
-print(swissPairings())
