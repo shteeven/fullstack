@@ -56,7 +56,7 @@ def View(env, resp):
     It displays the submission form and the previously posted messages.
     """
     # get posts from database
-    posts = tournamentdb.get_all_players()
+    posts = tournamentdb.playerStandings()
     posts_map = []
     for p in posts:
         posts_map.append({'id': p[0], 'name': p[1]})
@@ -86,7 +86,7 @@ def Post(env, resp):
         if content:
             # Save it in the database
             print(content)
-            tournamentdb.registerPlayer(content)
+            tournamentdb.registerMember(content)
     # 302 redirect back to the main page
     headers = [('Location', '/'),
                ('Content-type', 'text/plain')]
