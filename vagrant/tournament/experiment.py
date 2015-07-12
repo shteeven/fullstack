@@ -15,33 +15,61 @@ def create_player_pairings(player, player_remaining_opponents):
 
 def create_pairings_table():
     # Compile a table of all players' possible matches for the next round
-    DB = tournamentdb.connect()
-    c = DB.cursor()
-    c.execute("""
-      SELECT p.id, (SELECT SUM(match_outcome) FROM matches WHERE player_id = p.id)
-      FROM players p""")
-    players = c.fetchall()
+    players = tournamentdb.playerStandings()
     pairings_table = {}
     players_constant = players[:]
     for i in players_constant:
-        possible_opponents = get_remaining_opponents(i[0])
+        possible_opponents = remainingOpponents(i[0])
         pairings_table[i[0]] = create_player_pairings(i, possible_opponents)
     return pairings_table
 
-# Gets opponents that the player has not yet had a match with
-def get_remaining_opponents(player):
+
+def remainingOpponents(p_id):
+    """Returns a list opponents that player had not yet had a match with.
+
+    The first entry in the list should be the opp
+
+    Returns:
+      A list of tuples, each of which contains (id, name, wins, matches):
+        id: the player's unique id (assigned by the database)
+        name: the player's full name (as registered)
+        wins: the number of matches the player has won
+        matches: the number of matches the player has played
+    """
     DB = tournamentdb.connect()
     c = DB.cursor()
-    c.execute("""
-      SELECT p.id,
-      (SELECT SUM(match_outcome) FROM matches WHERE player_id = p.id) AS points
-      FROM players p
-      LEFT JOIN (SELECT opponent_id FROM matches WHERE player_id = %s) m
-      ON m.opponent_id = p.id
-      WHERE m.opponent_id IS NULL
-      AND id != %s
-      ORDER BY points DESC
-    """, (player, player,))
+    # c.execute("SELECT player_id, SUM(match_outcome) "
+    #           "FROM matches "
+    #           "WHERE player_id NOT IN "
+    #           "(SELECT opponent_id FROM matches WHERE player_id = %s) "
+    #           "AND player_id != %s"
+    #           "GROUP BY player_id ",
+    #           (p_id, p_id,))
+    c.execute("SELECT player_id, opponent_id, "
+              "ABS(SUM(match_outcome) - (SELECT SUM(match_outcome) FROM matches WHERE player_id = m.opponent_id GROUP BY player_id)) "
+              "FROM matches m "
+              "WHERE opponent_id NOT IN "
+              "(SELECT opponent_id FROM matches WHERE player_id = %s) "
+              "AND player_id = %s"
+              "GROUP BY player_id, opponent_id ",
+              (p_id, p_id))
+    #c.execute("SELECT opponent_id FROM matches WHERE player_id = %s", (p_id,))
+    # c.execute("SELECT player_id, "
+    #           "(SELECT id FROM players WHERE id != m.player_id) AS o_id, SUM(match_outcome) "
+    #           "FROM matches m "
+    #           "WHERE player_id = %s "
+    #           "GROUP BY player_id, o_id", (p_id,))
+    c.execute("CREATE VIEW opponents "
+              "AS SELECT player_id, SUM(match_outcome) AS match_points "
+              "FROM matches m "
+              "WHERE m.opponent_id != %s AND player_id != %s "
+              "GROUP BY player_id", (p_id, p_id,))
+    c.execute("SELECT m.player_id, o.player_id, "
+              "ABS(SUM(m.match_outcome) - o.match_points) "
+              "FROM matches m, opponents o "
+              "WHERE m.player_id = %s "
+              "GROUP BY m.player_id, o.player_id, o.match_points", (p_id,))
+    #c.execute("SELECT id FROM players WHERE id != %s", (p_id,))
     return c.fetchall()
 
 
@@ -50,7 +78,7 @@ def recursive_pair_finder(pairings_table, players_by_point, pairs=[]):
     for p_id in players_by_point:
         possible_pairs = pairings_table[p_id]  # list of possible pairs
         for x in possible_pairs:
-            if len(pairs) >= 7:
+            if len(pairs) >= len(players_by_point)/2:
                 return pairs
             possible_opponent = x[1][0]
             if possible_opponent in players_by_point and p_id in players_by_point:
@@ -64,24 +92,24 @@ def recursive_pair_finder(pairings_table, players_by_point, pairs=[]):
 def main():
     DB = tournamentdb.connect()
     c = DB.cursor()
-    c.execute("""SELECT p.id
-      FROM players p
-      ORDER BY (SELECT SUM(match_outcome)
-        FROM matches
-        WHERE player_id = p.id) DESC""")
+    c.execute("SELECT p.id "
+              "FROM players p "
+              "ORDER BY "
+              "(SELECT SUM(match_outcome) "
+              "FROM matches "
+              "WHERE player_id = p.id) DESC")
     pairings_table = create_pairings_table()
     players_by_points = [i[0] for i in c.fetchall()]
     line_up = recursive_pair_finder(pairings_table, players_by_points)
-    for i in line_up:
-        print(i)
     print(line_up)
+    DB.close()
 
 
 
 def create_dummy_match_results():
     DB = tournamentdb.connect()
     c = DB.cursor()
-    c.execute("SELECT id FROM members")
+    c.execute("SELECT id FROM players")
     players = c.fetchall()
     print(players)
     copy = players[:]
@@ -99,4 +127,5 @@ def create_dummy_match_results():
     for i in pairs:
         tournamentdb.reportMatch(3, i[0][0], i[1][0])
 
-create_dummy_match_results()
+if __name__ == '__main__':
+    print remainingOpponents(1)

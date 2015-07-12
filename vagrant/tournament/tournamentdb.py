@@ -227,53 +227,53 @@ def playerStandings():
     return results
 
 
-def reportMatch(tourney_id, match_round, winner, loser, draw=None):
+def reportMatch(t_id, m_id, win_id, lose_id, draw=None):
     """Records the outcome of a single match between two players.
 
     Args:
-      winner:  the id number of the player who won
-      loser:  the id number of the player who lost
+      win_id:  the id number of the player who won
+      lose_id:  the id number of the player who lost
     """
     DB = connect()
     c = DB.cursor()
     if not draw:  # set records of match both in match table and player table
-        # update loser record
+        # update lose_id record
         c.execute("UPDATE members "
                   "SET matches = (matches + 1) "
-                  "WHERE id = %s;", (loser,))
-        # update loser record
+                  "WHERE id = %s;", (lose_id,))
+        # update lose_id record
         c.execute("UPDATE members "
                   "SET wins = (wins + 1), matches = (matches + 1) "
-                  "WHERE id = %s;", (winner,))
-        # update winner tourney card
+                  "WHERE id = %s;", (win_id,))
+        # update win_id tourney card
         c.execute("INSERT INTO matches (tourney_id, match_id, player_id, "
                   "opponent_id, match_outcome) "
                   "VALUES (%s ,%s, %s, %s, %s)",
-                  (tourney_id, match_round, winner, loser, 3))
-        # update loser tourney card
+                  (t_id, m_id, win_id, lose_id, 3))
+        # update lose_id tourney card
         c.execute("INSERT INTO matches (tourney_id, match_id, player_id, "
                   "opponent_id, match_outcome) "
                   "VALUES (%s, %s, %s, %s, %s)",
-                  (tourney_id, match_round, loser, winner, 0))
+                  (t_id, m_id, lose_id, win_id, 0))
     else:  # set records with 'draw' points
         # update player 1 record
         c.execute("UPDATE members "
                   "SET wins = (wins + .5), matches = (matches + 1) "
-                  "WHERE id = %s;", (loser,))
+                  "WHERE id = %s;", (lose_id,))
         # update player 2 record
         c.execute("UPDATE members "
                   "SET wins = (wins + .5), matches = (matches + 1) "
-                  "WHERE id = %s;", (winner,))
+                  "WHERE id = %s;", (win_id,))
         # update player 1 tourney card
         c.execute("INSERT INTO matches (tourney_id, match_id, player_id, "
                   "opponent_id, match_outcome) "
                   "VALUES (%s, %s, %s, %s, %s)",
-                  (tourney_id, match_round, winner, loser, 1))
+                  (t_id, m_id, win_id, lose_id, 1))
         # update player 2 tourney card
         c.execute("INSERT INTO matches (tourney_id,match_id, player_id, "
                   "opponent_id, match_outcome) "
                   "VALUES (%s, %s, %s, %s, %s)",
-                  (tourney_id, match_round, loser, winner, 1))
+                  (t_id, m_id, lose_id, win_id, 1))
     DB.commit()
     DB.close()
 
@@ -313,4 +313,3 @@ def swissPairings():
     return pairs
 
 
-print(playerStandings())
