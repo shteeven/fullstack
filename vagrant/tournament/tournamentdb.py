@@ -42,6 +42,12 @@ def truncateMatches():
     DB.close()
 
 
+def truncateAll():
+    truncateMatches()
+    truncatePlayers()
+    truncateMembers()
+
+
 def deleteMember(p_id):
     """Remove a member from the database.
 
@@ -83,6 +89,20 @@ def deleteMatches(t_id, m_id):
     DB.close()
 
 
+def deleteTourney(t_id):
+    """Removes a tournament's records from the database.
+
+     Args:
+      t_id: the tournament id.
+    """
+    DB = connect()
+    c = DB.cursor()
+    c.execute("DELETE FROM matches "
+              "WHERE tourney_id = %s", (t_id,))
+    DB.commit()
+    DB.close()
+
+
 def countMembers():
     """Returns the number of members currently registered."""
     DB = connect()
@@ -113,16 +133,21 @@ def registerMember(name):
 
     Args:
       name: the player's full name (need not be unique).
+
+    Returns: new member's assigned id (important for testing)
     """
     DB = connect()
     c = DB.cursor()
     c.execute("INSERT INTO members "
               "VALUES (DEFAULT, %s)", (name,))
+    c.execute("SELECT id FROM members WHERE name = %s", (name,))
+    new_id = c.fetchall()
     DB.commit()
     DB.close()
+    return new_id[0][0]
 
 
-def addMemberToPlayers(p_id):
+def registerPlayer(p_id):
     """Adds a player, or list of players, to the current tournament database.
 
     Args:
@@ -130,22 +155,16 @@ def addMemberToPlayers(p_id):
     """
     DB = connect()
     c = DB.cursor()
-    if type(p_id) == list:
-        for i in p_id:
-            c.execute("INSERT INTO players (id, seed_rank) "
-                      "SELECT id, COALESCE(wins / NULLIF(matches,0), 0) "
-                      "FROM members "
-                      "WHERE id = %s", (i,))
-    else:
-        c.execute("INSERT INTO players (id, seed_rank) "
-                  "SELECT id, COALESCE(wins / NULLIF(matches,0), 0) "
-                  "FROM members "
-                  "WHERE id = %s", (p_id,))
+    c.execute("INSERT INTO players (id, name, wins, matches, seed_score) "
+              "SELECT id, name, wins, matches, "
+              "COALESCE(wins / NULLIF(matches,0), 0) "
+              "FROM members "
+              "WHERE id = %s", (p_id,))
     DB.commit()
     DB.close()
 
 
-def memberRankings():
+def membersBySeeding():
     """Returns a list of the members and their win record, sorted
     by percentage of wins to matches.
 
@@ -165,20 +184,17 @@ def memberRankings():
               "COALESCE(wins / NULLIF(matches,0), 0) AS seed_score "
               "FROM members "
               "ORDER BY seed_score DESC")
-    results = []
-    for i in c.fetchall():
-        results.append(i)
-    DB.commit()
+    results = c.fetchall()
     DB.close()
     return results
 
 
-def playerRankings():
-    """Returns a list of the players and their and their seed score, sorted
+def membersByWins():
+    """Returns a list of the members and their win record, sorted
     by percentage of wins to matches.
 
-    The first entry in the list should be the player in first place, or a player
-    tied for first place if there is currently a tie.
+    The first entry in the list should be the player in first place, or tied
+    for first.
 
     Returns:
       A list of tuples, each of which contains (id, name, wins, matches):
@@ -189,13 +205,56 @@ def playerRankings():
     """
     DB = connect()
     c = DB.cursor()
+    c.execute("SELECT id, name, wins, matches "
+              "FROM members "
+              "ORDER BY wins DESC")
+    results = c.fetchall()
+    DB.close()
+    return results
+
+
+def playerSeedings():
+    """Returns a list of the players and their and their seed score, sorted
+    by percentage of wins to matches.
+
+    The first entry in the list should be the player in first place, or a player
+    tied for first place if there is currently a tie.
+
+    Returns:
+      A list of tuples, each of which contains (id, seed_score):
+        id: the player's unique id (assigned by the database)
+        seed_score: the players' wins divided by total number of matches played
+    """
+    DB = connect()
+    c = DB.cursor()
     c.execute("SELECT id, seed_score "
               "FROM players "
               "ORDER BY seed_score DESC")
-    results = []
-    for i in c.fetchall():
-        results.append(i)
+    results = c.fetchall()
     DB.commit()
+    DB.close()
+    return results
+
+
+def playersByWins():
+    """Returns a list of the players and their record, sorted by wins.
+
+    The first entry in the list should be the player in first place, or tied
+    for first.
+
+    Returns:
+      A list of tuples, each of which contains (id, name, wins, matches):
+        id: the player's unique id (assigned by the database)
+        name: the player's full name (as registered)
+        wins: the number of matches the player has won
+        matches: the number of matches the player has played
+    """
+    DB = connect()
+    c = DB.cursor()
+    c.execute("SELECT id, name, wins, matches "
+              "FROM players "
+              "ORDER BY wins DESC")
+    results = c.fetchall()
     DB.close()
     return results
 
@@ -216,13 +275,13 @@ def playerStandings():
     """
     DB = connect()
     c = DB.cursor()
-    c.execute("SELECT player_id, SUM(match_outcome) AS match_points "
-              "FROM matches GROUP BY player_id "
-              "ORDER BY match_points DESC")
-    results = []
-    for i in c.fetchall():
-        results.append(i)
-    DB.commit()
+    c.execute("SELECT p.id, COALESCE(SUM(m.match_outcome), 0) AS match_points "
+              "FROM players p "
+              "LEFT JOIN matches m "
+              "ON p.id = m.player_id "
+              "GROUP BY p.id "
+              "ORDER BY match_points, p.wins DESC")
+    results = c.fetchall()
     DB.close()
     return results
 
@@ -236,32 +295,14 @@ def reportMatch(t_id, m_id, win_id, lose_id, draw=None):
     """
     DB = connect()
     c = DB.cursor()
-    if not draw:  # set records of match both in match table and player table
-        # update lose_id record
-        c.execute("UPDATE members "
-                  "SET matches = (matches + 1) "
-                  "WHERE id = %s;", (lose_id,))
-        # update lose_id record
-        c.execute("UPDATE members "
-                  "SET wins = (wins + 1), matches = (matches + 1) "
-                  "WHERE id = %s;", (win_id,))
-        # update win_id tourney card
-        c.execute("INSERT INTO matches (tourney_id, match_id, player_id, "
-                  "opponent_id, match_outcome) "
-                  "VALUES (%s ,%s, %s, %s, %s)",
-                  (t_id, m_id, win_id, lose_id, 3))
-        # update lose_id tourney card
-        c.execute("INSERT INTO matches (tourney_id, match_id, player_id, "
-                  "opponent_id, match_outcome) "
-                  "VALUES (%s, %s, %s, %s, %s)",
-                  (t_id, m_id, lose_id, win_id, 0))
-    else:  # set records with 'draw' points
+    # set records with 'draw' points
+    if draw is True:
         # update player 1 record
-        c.execute("UPDATE members "
+        c.execute("UPDATE players "
                   "SET wins = (wins + .5), matches = (matches + 1) "
                   "WHERE id = %s;", (lose_id,))
         # update player 2 record
-        c.execute("UPDATE members "
+        c.execute("UPDATE players "
                   "SET wins = (wins + .5), matches = (matches + 1) "
                   "WHERE id = %s;", (win_id,))
         # update player 1 tourney card
@@ -274,6 +315,29 @@ def reportMatch(t_id, m_id, win_id, lose_id, draw=None):
                   "opponent_id, match_outcome) "
                   "VALUES (%s, %s, %s, %s, %s)",
                   (t_id, m_id, lose_id, win_id, 1))
+    # set records of match both in match table and player table
+    elif draw is None or draw is False:
+        # update lose_id record
+        c.execute("UPDATE players "
+                  "SET matches = (matches + 1) "
+                  "WHERE id = %s;", (lose_id,))
+        # update lose_id record
+        c.execute("UPDATE players "
+                  "SET wins = (wins + 1), matches = (matches + 1) "
+                  "WHERE id = %s;", (win_id,))
+        # update win_id tourney card
+        c.execute("INSERT INTO matches (tourney_id, match_id, player_id, "
+                  "opponent_id, match_outcome) "
+                  "VALUES (%s ,%s, %s, %s, %s)",
+                  (t_id, m_id, win_id, lose_id, 3))
+        # update lose_id tourney card
+        c.execute("INSERT INTO matches (tourney_id, match_id, player_id, "
+                  "opponent_id, match_outcome) "
+                  "VALUES (%s, %s, %s, %s, %s)",
+                  (t_id, m_id, lose_id, win_id, 0))
+    else:
+        raise TypeError("Draw argument can only be True or None.")
+
     DB.commit()
     DB.close()
 
@@ -295,11 +359,11 @@ def swissPairings():
     """
     DB = connect()
     c = DB.cursor()
-    c.execute("SELECT * FROM players ORDER BY wins DESC")
+    c.execute("SELECT id, name FROM players ORDER BY wins DESC")
     pairs = []
     pair = None
-    a = c.fetchall()
-    for i in a:
+    for i in c.fetchall():
+        print(i)
         if pair:
             pair = pair + (i[0],) + (i[1],)
             pairs.append(pair)
@@ -313,3 +377,15 @@ def swissPairings():
     return pairs
 
 
+def endTournament():
+    DB = connect()
+    c = DB.cursor()
+    c.execute("UPDATE members "
+              "SET wins = p.wins, matches = p.matches "
+              "FROM players p "
+              "WHERE members.id = p.id"
+              )
+    DB.commit()
+    DB.close()
+    truncatePlayers()
+    print("EoT. Members' records updated and players table cleared.")
