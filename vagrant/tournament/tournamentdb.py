@@ -185,6 +185,7 @@ def membersBySeeding():
               "FROM members "
               "ORDER BY seed_score DESC")
     results = c.fetchall()
+    DB.commit()
     DB.close()
     return results
 
@@ -209,6 +210,7 @@ def membersByWins():
               "FROM members "
               "ORDER BY wins DESC")
     results = c.fetchall()
+    DB.commit()
     DB.close()
     return results
 
@@ -255,6 +257,7 @@ def playersByWins():
               "FROM players "
               "ORDER BY wins DESC")
     results = c.fetchall()
+    DB.commit()
     DB.close()
     return results
 
@@ -282,6 +285,7 @@ def playerStandings():
               "GROUP BY p.id "
               "ORDER BY match_points, p.wins DESC")
     results = c.fetchall()
+    DB.commit()
     DB.close()
     return results
 
@@ -342,39 +346,40 @@ def reportMatch(t_id, m_id, win_id, lose_id, draw=None):
     DB.close()
 
 
-def swissPairings():
-    """Returns a list of pairs of players for the next round of a match.
-
-    Assuming that there are an even number of players registered, each player
-    appears exactly once in the pairings.  Each player is paired with another
-    player with an equal or nearly-equal win record, that is, a player adjacent
-    to him or her in the standings.
-
-    Returns:
-      A list of tuples, each of which contains (id1, name1, id2, name2)
-        id1: the first player's unique id
-        name1: the first player's name
-        id2: the second player's unique id
-        name2: the second player's name
-    """
-    DB = connect()
-    c = DB.cursor()
-    c.execute("SELECT id, name FROM players ORDER BY wins DESC")
-    pairs = []
-    pair = None
-    for i in c.fetchall():
-        print(i)
-        if pair:
-            pair = pair + (i[0],) + (i[1],)
-            pairs.append(pair)
-            pair = None
-        else:
-            pair = (i[0], i[1])
-    if pair:  # Is true if odd number of players
-        pair = pair + (9999,) + ('BYE',)
-        pairs.append(pair)
-    DB.close()
-    return pairs
+# def swissPairings():
+#     """Returns a list of pairs of players for the next round of a match.
+#
+#     Assuming that there are an even number of players registered, each player
+#     appears exactly once in the pairings.  Each player is paired with another
+#     player with an equal or nearly-equal win record, that is, a player adjacent
+#     to him or her in the standings.
+#
+#     Returns:
+#       A list of tuples, each of which contains (id1, name1, id2, name2)
+#         id1: the first player's unique id
+#         name1: the first player's name
+#         id2: the second player's unique id
+#         name2: the second player's name
+#     """
+#     DB = connect()
+#     c = DB.cursor()
+#     c.execute("SELECT id, name FROM players ORDER BY wins DESC")
+#     pairs = []
+#     pair = None
+#     for i in c.fetchall():
+#         print(i)
+#         if pair:
+#             pair = pair + (i[0],) + (i[1],)
+#             pairs.append(pair)
+#             pair = None
+#         else:
+#             pair = (i[0], i[1])
+#     if pair:  # Is true if odd number of players
+#         pair = pair + (9999,) + ('BYE',)
+#         pairs.append(pair)
+#     DB.commit()
+#     DB.close()
+#     return pairs
 
 
 def endTournament():

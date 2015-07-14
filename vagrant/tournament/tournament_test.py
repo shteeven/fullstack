@@ -3,8 +3,9 @@
 # Test cases for tournament.py
 
 from tournamentdb import *
-import experiment
+import swisspairing
 import sys
+import math
 
 
 def testRegisterMember():
@@ -142,7 +143,7 @@ def testPairings():
     endTournament()
     [registerPlayer(row[0]) for row in membersBySeeding()]
     print playerSeedings()
-    pairings = experiment.main()
+    pairings = swisspairing.main()
     print(pairings)
     if len(pairings) != 4:
         raise ValueError(
@@ -183,14 +184,42 @@ def createTestCase():
     # Start fake tourney here.
     tourney = 1
     round = 1
+    seedings = membersBySeeding()
+    players = [row[0] for row in seedings]
     for i in players:
         registerPlayer(i)
-    print experiment.main()
-    print(membersBySeeding())
+    standings = playerStandings()
+
+    # TEMPLATE FOR FIRST ROUND PAIRINGS
+    players_list = [row[0] for row in standings]
+    numOfPlayers = len(players_list)
+    for i in range(numOfPlayers/2):
+        reportMatch(123, 1, players_list[i], players_list[i+numOfPlayers/2])
+    count = 1
+    print("round " + str(count))
+    for i in range(int(math.ceil(math.log(numOfPlayers, 2))-1)):
+        count += 1
+        print("round " + str(count))
+        current_round = i + 2
+        line_up = swisspairing.main()
+        print(line_up)
+        for x in line_up:
+            if x[0] < x[1]:
+                reportMatch(123, current_round, x[0], x[1])
+            elif x[1] < x[0]:
+                reportMatch(123, current_round, x[1], x[0])
+
+    print("final scores")
+    print(playerStandings())
+
+
 
 if __name__ == '__main__':
-    truncateAll()
+    truncateMatches()
+    truncatePlayers()
+    truncateMembers()
     createTestCase()
+    #print swisspairing.swissPairings()
 
     print "Success!  All tests pass!"
 

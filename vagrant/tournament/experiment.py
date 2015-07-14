@@ -17,18 +17,33 @@ def remainingOpponents(p_id):
     """
     DB = tournamentdb.connect()
     c = DB.cursor()
-    c.execute("CREATE VIEW opponents "
+    c.execute("CREATE OR REPLACE VIEW opponents_%s "
               "AS SELECT player_id, SUM(match_outcome) AS match_points "
               "FROM matches m "
               "WHERE m.opponent_id != %s AND player_id != %s "
-              "GROUP BY player_id", (p_id, p_id,))
+              "GROUP BY player_id", (p_id, p_id, p_id,))
+    c.execute("SELECT * FROM opponents")
+    print(p_id)
+    print(c.fetchall())
     c.execute("SELECT m.player_id, o.player_id, "
               "ABS(SUM(m.match_outcome) - o.match_points) AS diff "
-              "FROM matches m, opponents o "
-              "WHERE m.player_id = %s "
-              "GROUP BY m.player_id, o.player_id, o.match_points "
-              "ORDER BY diff", (p_id,))
+              "FROM matches m, opponents_%s o, players p "
+              "WHERE m.player_id = %s AND o.player_id = p.id "
+              "GROUP BY m.player_id, o.player_id, o.match_points, p.wins "
+              "ORDER BY diff, p.wins", (p_id, p_id,))
+
+    # c.execute("SELECT p.id, ABS(SUM(m.match_outcome)) "
+    #           "FROM players p "
+    #           "LEFT JOIN matches m  "
+    #           "ON p.id = m.player_id "
+    #           "GROUP BY p.id", (p_id,))
+    # "WHERE m.player_id = %s "
+    #           "GROUP BY m.player_id, o.player_id, o.match_points "
+    #           "ORDER BY diff"
+
     remaining_opp = c.fetchall()
+    print(remaining_opp)
+    DB.commit()
     DB.close()
     return remaining_opp
 
@@ -58,7 +73,3 @@ def main():
     line_up = recursivePairFinder(pairings_table, players_by_points)
     return line_up
 
-
-
-# if __name__ == '__main__':
-#     main()
