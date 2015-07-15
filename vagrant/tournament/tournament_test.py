@@ -167,10 +167,16 @@ def createTestCase():
     but with opponents opposite ends of that bracket, thereby saving the
     most even matches for last.
     """
+    truncateAll()
     players = [registerMember("A"), registerMember("B"),
                registerMember("C"), registerMember("D"),
                registerMember("E"), registerMember("F"),
-               registerMember("G"), registerMember("H")]
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R")]
     db = connect()
     c = db.cursor()
     x = 8
@@ -194,33 +200,99 @@ def createTestCase():
     players_list = [row[0] for row in standings]
     numOfPlayers = len(players_list)
     for i in range(numOfPlayers/2):
-        reportMatch(123, 1, players_list[i], players_list[i+numOfPlayers/2])
+        reportMatch(tourney, round, players_list[i], players_list[i+numOfPlayers/2])
     count = 1
     print("round " + str(count))
     for i in range(int(math.ceil(math.log(numOfPlayers, 2))-1)):
         count += 1
         print("round " + str(count))
         current_round = i + 2
-        line_up = swisspairing.main()
-        print(line_up)
+        line_up = swissPairings(tourney)
         for x in line_up:
             if x[0] < x[1]:
-                reportMatch(123, current_round, x[0], x[1])
+                reportMatch(tourney, current_round, x[0], x[1])
             elif x[1] < x[0]:
-                reportMatch(123, current_round, x[1], x[0])
+                reportMatch(tourney, current_round, x[1], x[0])
 
     print("final scores")
     print(playerStandings())
 
 
 
-if __name__ == '__main__':
-    truncateMatches()
+def runTestCase():
+    """
+    Create mock records. Create mock tourney with rounds. Modify algorithm
+    to have players face opponents within their own brackets of each round,
+    but with opponents opposite ends of that bracket, thereby saving the
+    most even matches for last.
+    """
     truncatePlayers()
-    truncateMembers()
-    createTestCase()
-    #print swisspairing.swissPairings()
+    db = connect()
+    c = db.cursor()
+    c.execute("SELECT tourney_id "
+              "FROM matches "
+              "GROUP BY tourney_id "
+              "ORDER BY tourney_id DESC")
+    tourney = (c.fetchone())[0] + 1
+    db.commit()
+    db.close()
+    #Start fake tourney here.
+    round = 1
+    seedings = membersBySeeding()
+    players = [row[0] for row in seedings]
+    for i in players:
+        registerPlayer(i)
+    standings = playerStandings()
 
+    # TEMPLATE FOR FIRST ROUND PAIRINGS
+    players_list = [row[0] for row in standings]
+    numOfPlayers = len(players_list)
+    for i in range(numOfPlayers/2):
+        reportMatch(tourney, round, players_list[i], players_list[i+numOfPlayers/2])
+    count = 1
+    print("round " + str(count))
+    for i in range(int(math.ceil(math.log(numOfPlayers, 2))-1)):
+        count += 1
+        print("round " + str(count))
+        current_round = i + 2
+        line_up = swissPairings(tourney)
+        for x in line_up:
+            if x[0] < x[1]:
+                reportMatch(tourney, current_round, x[0], x[1])
+            elif x[1] < x[0]:
+                reportMatch(tourney, current_round, x[1], x[0])
+
+    print("final scores")
+    print(playerStandings())
+    endTournament()
+
+
+
+if __name__ == '__main__':
+    createTestCase()
+
+    #print swisspairing.swissPairings()
+    # DB = connect()
+    # c = DB.cursor()
+    # c.execute("SELECT player_id, opponent_id, match_outcome FROM matches "
+    #           "WHERE tourney_id = %s AND match_id = %s", (2, 1,))
+    # print("round 1")
+    # print(c.fetchall())
+    #
+    # c.execute("SELECT player_id, opponent_id, match_outcome FROM matches "
+    #           "WHERE tourney_id = %s AND match_id = %s", (2, 2,))
+    # print("round 2")
+    # print(c.fetchall())
+    # c.execute("SELECT player_id, opponent_id, match_outcome FROM matches "
+    #           "WHERE tourney_id = %s AND match_id = %s", (2, 3,))
+    # print("round 3")
+    # print(c.fetchall())
+    # c.execute("SELECT player_id, opponent_id, match_outcome FROM matches "
+    #           "WHERE tourney_id = %s AND match_id = %s", (2, 4,))
+    # print("round 4")
+    # print(c.fetchall())
+    # DB.commit()
+    # DB.close()
     print "Success!  All tests pass!"
 
 
