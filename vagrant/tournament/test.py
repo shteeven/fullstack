@@ -134,8 +134,8 @@ def createTestCase():
     """
     truncateAll()
     players = [registerMember("A"), registerMember("B"),
-               registerMember("C"), registerMember("D"),]
-               # registerMember("E"), registerMember("F"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E")]#, registerMember("F"),
                # registerMember("G"), registerMember("H"),
                # registerMember("I"), registerMember("J"),
                # registerMember("K"), registerMember("L"),
@@ -182,11 +182,11 @@ def runTestCase(is_new=False):
     players = [row[0] for row in seedings]
     for i in players:
         registerPlayer(i)
-    standings = playerStandings(tourney)
+    #standings = playerStandings(tourney)
 
     # TEMPLATE FOR FIRST ROUND PAIRINGS
-    players_list = [row[0] for row in standings]
-    numOfPlayers = len(players_list)
+    #players_list = [row[0] for row in standings]
+    numOfPlayers = len(playerStandings(tourney))
     count = 0
 
     for i in range(int(math.ceil(math.log(numOfPlayers, 2)))):
@@ -194,6 +194,7 @@ def runTestCase(is_new=False):
         print("round " + str(count))
         current_round = i + 2
         line_up = swissPairings(tourney)
+        print(line_up)
         for x in line_up:
             if x[0] < x[1]:
                 reportMatch(tourney, current_round, x[0], x[1])

@@ -8,12 +8,7 @@ import copy
 
 def connect():
     """Connect to the PostgreSQL database.  Returns a database connection."""
-    # For dev w/o vagrant & w/ pgAdmin III
-    return psycopg2.connect(host="localhost",
-                            dbname="tournament"
-                            )
-    # For dev w/ vagrant
-    # return psycopg2.connect(dbname="tournament")
+    return psycopg2.connect(dbname="tournament")
 
 
 def truncateMembers():
@@ -130,9 +125,6 @@ def countPlayers():
 def registerMember(name):
     """Adds a member to the database.
 
-    The database assigns a unique serial id number for the player.  (This
-    should be handled by your SQL database schema, not in your Python code.)
-
     Args:
       name: the player's full name (need not be unique).
 
@@ -153,7 +145,7 @@ def registerPlayer(p_id):
     """Adds a player, or list of players, to the current tournament database.
 
     Args:
-      p_id: the player's member id or list of member ids.
+      p_id: the player's member id.
     """
     db = connect()
     c = db.cursor()
@@ -193,8 +185,7 @@ def membersBySeeding():
 
 
 def membersByWins():
-    """Returns a list of the members and their win record, sorted
-    by percentage of wins to matches.
+    """Returns a list of the members and sorted by their win record.
 
     The first entry in the list should be the player in first place, or tied
     for first.
@@ -265,18 +256,18 @@ def playersByWins():
 
 
 def playerStandings(t_id):
-    """Returns a list of the players and their and their seed score, sorted
-    by percentage of wins to matches.
+    """Returns a list of the players and their match points.
 
     The first entry in the list should be the player in first place, or a player
     tied for first place if there is currently a tie.
 
+    Arg:
+      t_id: tournament id.
+
     Returns:
-      A list of tuples, each of which contains (id, name, wins, matches):
-        id: the player's unique id (assigned by the database)
-        name: the player's full name (as registered)
-        wins: the number of matches the player has won
-        matches: the number of matches the player has played
+      A list of tuples, each of which contains (id, match_points):
+        id: the player's unique id
+        matches: the total match points the player has won thus far
     """
     db = connect()
     c = db.cursor()
@@ -294,12 +285,16 @@ def playerStandings(t_id):
     return results
 
 
-def reportMatch(t_id, m_id, win_id, lose_id, draw=None):
-    """Records the outcome of a single match between two players.
+def reportMatch(t_id, m_id, win_id, lose_id, draw=False):
+    """Records the outcome of a single match between two players to the
+    players' table only; not the members' table.
 
     Args:
-      win_id:  the id number of the player who won
-      lose_id:  the id number of the player who lost
+      t_id: tournament id.
+      m_id: match (round) id.
+      win_id: the id number of the player who won.
+      lose_id: the id number of the player who lost.
+      draw: draw if True; can accept False (optional)
     """
     db = connect()
     c = db.cursor()
@@ -324,7 +319,7 @@ def reportMatch(t_id, m_id, win_id, lose_id, draw=None):
                   "VALUES (%s, %s, %s, %s, %s)",
                   (t_id, m_id, lose_id, win_id, 1))
     # set records of match both in match table and player table
-    elif draw is None or draw is False:
+    elif draw is False:
         # update lose_id record
         c.execute("UPDATE players "
                   "SET matches = (matches + 1) "
@@ -344,16 +339,27 @@ def reportMatch(t_id, m_id, win_id, lose_id, draw=None):
                   "VALUES (%s, %s, %s, %s, %s)",
                   (t_id, m_id, lose_id, win_id, 0))
     else:
-        raise TypeError("Draw argument can only be True or None.")
-
+        raise TypeError("Draw argument can only be True or False.")
     db.commit()
     db.close()
 
 
 def playerRanks(t_id):
+    """Returns the players' ranks in order of match points. In the case of ties,
+      players are sub-sorted by opponent match wins, then seed_score.
+
+    Args:
+      t_id: tournament id.
+
+    Returns:
+      A list of tuples, each of which contains (id, name, match_points, omw):
+        id: the player's unique id.
+        name: the name of player.
+        match_points: the player's match point total for tournament
+        omw: the opponent match wins for tournament
+    """
     db = connect()
     c = db.cursor()
-    #c.execute("DROP VIEW omw")
     c.execute("CREATE OR REPLACE VIEW omw "
               "AS SELECT m.player_id, "
               "SUM(m.match_outcome) AS match_points "
@@ -378,13 +384,15 @@ def playerRanks(t_id):
 
 
 def endTournament():
+    """To be ran at the end of each tournament. This function updates member
+    data with data from players table, and then truncates the players table.
+    """
     db = connect()
     c = db.cursor()
     c.execute("UPDATE members m "
               "SET wins = p.wins + m.wins, matches = p.matches + m.matches "
               "FROM players p "
-              "WHERE m.id = p.id"
-              )
+              "WHERE m.id = p.id")
     db.commit()
     db.close()
     truncatePlayers()
@@ -392,20 +400,85 @@ def endTournament():
 
 
 def swissPairings(t_id):
+    """Returns a list of pairs of players for the next round of a match.
+    This function pools other functions to create pairs that provide the
+    tournament with results that are more aligned with the players
+    abilities and expected outcomes.
+    It also ensures that no player plays another twice, can run with
+    odd number of players, and no player gets more than one bye. This
+    program works as long as the number of rounds is roughly log2 n;
+    n being the number of players. Can work with more.
+
+    Args:
+      t_id: the tournament id.
+
+    Returns:
+      A list of tuples, each of which contains (id1, id2, diff)
+        id1: the first player's unique id
+        id2: the second player's unique id
+        diff: the absolute difference in players' match points
+    """
     db = connect()
     c = db.cursor()
     c.execute("SELECT * FROM matches WHERE tourney_id = %s", (t_id,))
-    in_progress = c.fetchone()
-    db.commit()
-    db.close()
-    if in_progress == None:
+    num_of_players = countPlayers()
+    if c.fetchone() == None:
+        if num_of_players % 2 != 0:
+            c.execute("INSERT INTO players (id, name, seed_score) "
+                      "VALUES (2147483647, 'BYE', 0)")
         pairs_list = initialPairing(t_id)
     else:
         pairs_list = subsequentPairings(t_id)
-    return pairs_list
+    db.commit()
+    db.close()
+    if len(pairs_list) == (num_of_players/2):
+        return pairs_list
+    else:
+        raise ValueError("swissPairings is not returning the expected number "
+                         "of pairs. This is most likely due to the number of"
+                         "rounds for this style of tournament being exceeded.")
+
+
+def initialPairing(t_id):
+    """This is the initial pairing function. It pairs players based on seeding,
+    allowing players to be better placed in the pool for situations where a tie
+    may arise, as well as avoid high-performing, evenly-matched players from
+    being matched in the first round.
+    Returns a list of pairs of players for the initial round of a tourney.
+
+    Args:
+      t_id: the tournament id.
+
+    Returns:
+      A list of tuples, each of which contains (id1, id2, diff)
+        id1: the first player's unique id
+        id2: the second player's unique id
+        diff: the absolute difference in players' match points
+    """
+
+    pair_count = countPlayers() / 2
+    players_list = [row[0] for row in playerStandings(t_id)]
+    pairs = []
+    for i in range(pair_count):
+        pairs.append((players_list[i], players_list[i + pair_count], 0))
+    return pairs
 
 
 def subsequentPairings(t_id):
+    """This is a function that follows the initial pairing function. If there
+    are no records for this tourney in the matches table, it will fail to run.
+    Returns a list of pairs of players for the next round of a tourney. Relies
+    on recursivePairFinder() to find the best pairing combination.
+
+    Args:
+      t_id: the tournament id.
+
+    Returns:
+      A list of tuples, each of which contains (id1, id2, diff)
+        id1: the first player's unique id
+        id2: the second player's unique id
+        diff: the absolute difference in players' match points
+    """
     players = playerStandings(t_id)
     pairings_table = {}
     players_by_points = [i[0] for i in players]
@@ -415,15 +488,6 @@ def subsequentPairings(t_id):
     pairs_list = recursivePairFinder(pairings_table,
                                      players_by_points, num_of_players, [])
     return pairs_list
-
-
-def initialPairing(t_id):
-    pair_count = countPlayers() / 2
-    players_list = [row[0] for row in playerStandings(t_id)]
-    pairs = []
-    for i in range(pair_count):
-        pairs.append((players_list[i], players_list[i + pair_count], 0))
-    return pairs
 
 
 def remainingOpponents(t_id, p_id):
@@ -465,6 +529,24 @@ def remainingOpponents(t_id, p_id):
 
 
 def recursivePairFinder(pairings_table, players, size, pairs=[]):
+    """Returns a list with the best combination of pairings. It tries to
+    match the players with the same match points, if more than one option is
+    available, it will try to pair the player with the lowest ranked player of
+    that pool.
+
+    Args:
+      pairings_table: a dict with keys: players' ids and values: list of
+                      remaining possible opponent for that player.
+      players: list of players not yet paired, decreasing as recursion deepens.
+      size: the size of the expected pairs list to be returned.
+      pairs: pairs is passed down each recurrence and added to.
+
+    Returns:
+      A list of tuples, each of which contains (id1, id2, diff)
+        id1: the first player's unique id
+        id2: the second player's unique id
+        diff: the absolute difference in players' match points
+    """
     if len(pairs) < size:
         players_copy = copy.deepcopy(players)
         pairs_copy = copy.deepcopy(pairs)
