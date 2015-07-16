@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# tournamentdb.py -- the DB implementation of a Swiss-system tournament
+# tournamentdb.py -- the db implementation of a Swiss-system tournament
 #
 
 import psycopg2
@@ -18,32 +18,33 @@ def connect():
 
 def truncateMembers():
     """Remove all the member records from the database."""
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("TRUNCATE members")
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
 
 
 def truncatePlayers():
-    """Remove all the player records from the database."""
-    DB = connect()
-    c = DB.cursor()
+    """Remove all the player records from the players table."""
+    db = connect()
+    c = db.cursor()
     c.execute("TRUNCATE players")
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
 
 
 def truncateMatches():
     """Remove all the match records from the database."""
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("TRUNCATE matches")
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
 
 
 def truncateAll():
+    """Truncate all tables in database; matches, members, and players."""
     truncateMatches()
     truncatePlayers()
     truncateMembers()
@@ -55,24 +56,24 @@ def deleteMember(p_id):
     Args:
       p_id: the member's id.
     """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("DELETE FROM members WHERE id = %s", (p_id,))
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
 
 
 def deletePlayer(p_id):
-    """Remove a player from the current tourney from the database.
+    """Remove a player in the current tourney from the database.
 
     Args:
-      p_id: the member's id.
+      p_id: the player's id.
     """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("DELETE FROM players WHERE id = %s", (p_id,))
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
 
 
 def deleteMatches(t_id, m_id):
@@ -82,12 +83,12 @@ def deleteMatches(t_id, m_id):
       t_id: the tournament id.
       m_id: the match round id.
      """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("DELETE FROM matches "
               "WHERE tourney_id = %s AND match_id = %s", (t_id, m_id,))
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
 
 
 def deleteTourney(t_id):
@@ -96,33 +97,33 @@ def deleteTourney(t_id):
      Args:
       t_id: the tournament id.
     """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("DELETE FROM matches "
               "WHERE tourney_id = %s", (t_id,))
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
 
 
 def countMembers():
     """Returns the number of members currently registered."""
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("SELECT count(*) FROM members")
     result = c.fetchone()[0]
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
     return result
 
 
 def countPlayers():
     """Returns the number of players currently in the tournament."""
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("SELECT count(*) FROM players")
     result = c.fetchone()[0]
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
     return result
 
 
@@ -137,14 +138,14 @@ def registerMember(name):
 
     Returns: new member's assigned id (important for testing)
     """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("INSERT INTO members "
               "VALUES (DEFAULT, %s)", (name,))
     c.execute("SELECT id FROM members WHERE name = %s", (name,))
     new_id = c.fetchall()
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
     return new_id[0][0]
 
 
@@ -154,15 +155,15 @@ def registerPlayer(p_id):
     Args:
       p_id: the player's member id or list of member ids.
     """
-    DB = connect()
-    c = DB.cursor()
-    c.execute("INSERT INTO players (id, name, wins, matches, seed_score) "
-              "SELECT id, name, wins, matches, "
+    db = connect()
+    c = db.cursor()
+    c.execute("INSERT INTO players (id, name, seed_score) "
+              "SELECT id, name, "
               "COALESCE(wins / NULLIF(matches,0), 0) "
               "FROM members "
               "WHERE id = %s", (p_id,))
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
 
 
 def membersBySeeding():
@@ -179,15 +180,15 @@ def membersBySeeding():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("SELECT id, name, wins, matches,"
               "COALESCE(wins / NULLIF(matches,0), 0) AS seed_score "
               "FROM members "
               "ORDER BY seed_score DESC")
     results = c.fetchall()
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
     return results
 
 
@@ -205,14 +206,14 @@ def membersByWins():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("SELECT id, name, wins, matches "
               "FROM members "
               "ORDER BY wins DESC")
     results = c.fetchall()
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
     return results
 
 
@@ -228,14 +229,14 @@ def playerSeedings():
         id: the player's unique id (assigned by the database)
         seed_score: the players' wins divided by total number of matches played
     """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("SELECT id, seed_score "
               "FROM players "
               "ORDER BY seed_score DESC")
     results = c.fetchall()
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
     return results
 
 
@@ -252,18 +253,18 @@ def playersByWins():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("SELECT id, name, wins, matches "
               "FROM players "
               "ORDER BY wins DESC")
     results = c.fetchall()
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
     return results
 
 
-def playerStandings():
+def playerStandings(t_id):
     """Returns a list of the players and their and their seed score, sorted
     by percentage of wins to matches.
 
@@ -277,17 +278,19 @@ def playerStandings():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
-    DB = connect()
-    c = DB.cursor()
-    c.execute("SELECT p.id, COALESCE(SUM(m.match_outcome), 0) AS match_points "
+    db = connect()
+    c = db.cursor()
+    c.execute("SELECT p.id, "
+              "COALESCE("
+              "(SELECT SUM(match_outcome) "
+              "FROM matches "
+              "WHERE tourney_id = %s AND player_id = p.id), 0) AS match_points "
               "FROM players p "
-              "LEFT JOIN matches m "
-              "ON p.id = m.player_id "
               "GROUP BY p.id "
-              "ORDER BY match_points, p.wins DESC")
+              "ORDER BY match_points, p.wins DESC", (t_id,))
     results = c.fetchall()
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
     return results
 
 
@@ -298,8 +301,8 @@ def reportMatch(t_id, m_id, win_id, lose_id, draw=None):
       win_id:  the id number of the player who won
       lose_id:  the id number of the player who lost
     """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     # set records with 'draw' points
     if draw is True:
         # update player 1 record
@@ -343,22 +346,84 @@ def reportMatch(t_id, m_id, win_id, lose_id, draw=None):
     else:
         raise TypeError("Draw argument can only be True or None.")
 
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
+
+
+def playerRanks(t_id):
+    db = connect()
+    c = db.cursor()
+    #c.execute("DROP VIEW omw")
+    c.execute("CREATE OR REPLACE VIEW omw "
+              "AS SELECT m.player_id, "
+              "SUM(m.match_outcome) AS match_points "
+              "FROM matches m, players p "
+              "WHERE m.player_id = p.id AND tourney_id = %s "
+              "GROUP BY m.player_id, p.name "
+              "ORDER BY match_points DESC ", (t_id,))
+    c.execute("SELECT o.player_id, p.name, o.match_points, "
+              "(SELECT SUM(o.match_points) FROM omw o "
+              "LEFT JOIN matches m "
+              "ON o.player_id=m.player_id "
+              "WHERE m.opponent_id = p.id AND m.tourney_id = %s) AS omw_score "
+              "FROM players p "
+              "LEFT JOIN omw o "
+              "ON p.id=o.player_id "
+              "ORDER BY o.match_points DESC, omw_score DESC, p.seed_score DESC",
+              (t_id,))
+    ranks = c.fetchall()
+    db.commit()
+    db.close()
+    return ranks
 
 
 def endTournament():
-    DB = connect()
-    c = DB.cursor()
-    c.execute("UPDATE members "
-              "SET wins = p.wins, matches = p.matches "
+    db = connect()
+    c = db.cursor()
+    c.execute("UPDATE members m "
+              "SET wins = p.wins + m.wins, matches = p.matches + m.matches "
               "FROM players p "
-              "WHERE members.id = p.id"
+              "WHERE m.id = p.id"
               )
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
     truncatePlayers()
     print("EoT. Members' records updated and players table cleared.")
+
+
+def swissPairings(t_id):
+    db = connect()
+    c = db.cursor()
+    c.execute("SELECT * FROM matches WHERE tourney_id = %s", (t_id,))
+    in_progress = c.fetchone()
+    db.commit()
+    db.close()
+    if in_progress == None:
+        pairs_list = initialPairing(t_id)
+    else:
+        pairs_list = subsequentPairings(t_id)
+    return pairs_list
+
+
+def subsequentPairings(t_id):
+    players = playerStandings(t_id)
+    pairings_table = {}
+    players_by_points = [i[0] for i in players]
+    num_of_players = countPlayers()/2
+    for i in players_by_points:
+        pairings_table[i] = remainingOpponents(t_id, i)
+    pairs_list = recursivePairFinder(pairings_table,
+                                     players_by_points, num_of_players, [])
+    return pairs_list
+
+
+def initialPairing(t_id):
+    pair_count = countPlayers() / 2
+    players_list = [row[0] for row in playerStandings(t_id)]
+    pairs = []
+    for i in range(pair_count):
+        pairs.append((players_list[i], players_list[i + pair_count], 0))
+    return pairs
 
 
 def remainingOpponents(t_id, p_id):
@@ -374,8 +439,8 @@ def remainingOpponents(t_id, p_id):
         opponent_id: the opponent's unique id (assigned by the database)
         diff: absolute difference in match_point totals
     """
-    DB = connect()
-    c = DB.cursor()
+    db = connect()
+    c = db.cursor()
     c.execute("DROP VIEW opponents")
     c.execute("CREATE OR REPLACE VIEW opponents "
               "AS SELECT p.id, "
@@ -393,10 +458,9 @@ def remainingOpponents(t_id, p_id):
               "o.id, o.diff  FROM opponents o, players p "
               "WHERE p.id = o.id "
               "ORDER BY o.diff, p.seed_score", (p_id,))
-
     remaining_opp = c.fetchall()
-    DB.commit()
-    DB.close()
+    db.commit()
+    db.close()
     return remaining_opp
 
 
@@ -420,26 +484,3 @@ def recursivePairFinder(pairings_table, players, size, pairs=[]):
                 break
     return pairs
 
-
-
-def swissPairings(t_id):
-    players = playerStandings()
-    pairings_table = {}
-    players_by_points = [i[0] for i in players]
-    num_of_players = countPlayers()/2
-    for i in players_by_points:
-        pairings_table[i] = remainingOpponents(t_id, i)
-    pairs_list = recursivePairFinder(pairings_table,
-                                     players_by_points, num_of_players, [])
-    return pairs_list
-
-def initialPairing(t_id):
-    num_of_players = countPlayers()
-    print(num_of_players)
-    players_list = [row[0] for row in playerStandings()]
-    pairs = []
-    for i in range(num_of_players/2):
-        pairs.append((players_list[i], players_list[i+num_of_players/2], 0))
-    return pairs
-
-print initialPairing(1)
