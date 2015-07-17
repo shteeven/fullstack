@@ -8,7 +8,7 @@ import copy
 
 def connect():
     """Connect to the PostgreSQL database.  Returns a database connection."""
-    return psycopg2.connect(dbname="tournament")
+    return psycopg2.connect(host="localhost", dbname="tournament", user="postgres")
 
 
 def truncateMembers():
@@ -437,14 +437,9 @@ def swissPairings(t_id):
         pairs_list = initialPairing(t_id)
     else:
         pairs_list = subsequentPairings(t_id)
-
     if len(pairs_list) == (num_of_players / 2):
         return pairs_list
     else:
-        print(pairs_list)
-        print(len(pairs_list))
-        print(num_of_players)
-        print(num_of_players/2)
         raise ValueError("swissPairings is not returning the expected number "
                          "of pairs. This is most likely due to the number of"
                          "rounds for this style of tournament being exceeded.")
@@ -496,8 +491,8 @@ def subsequentPairings(t_id):
     num_of_players = countPlayers()/2
     for i in players_by_points:
         pairings_table[i] = remainingOpponents(t_id, i)
-    pairs_list = recursivePairFinder(pairings_table,
-                                     players_by_points, num_of_players, [])
+    pairs_list = recursivePairFinder2(
+        pairings_table, players_by_points, num_of_players)
     return pairs_list
 
 
@@ -575,4 +570,37 @@ def recursivePairFinder(pairings_table, players, size, pairs=[]):
             if len(pairs) >= size:
                 break
     return pairs
+
+
+def recursivePairFinder2(pairings_table, players, size):
+    pairs = []
+    try:
+        players_copy
+    except NameError:
+        players_copy = copy.deepcopy(players)
+    for i in players:
+        opponents = pairings_table[i]
+        for x in opponents:
+            opponent = x[1]
+            if opponent in players_copy and i in players_copy:
+                players_copy_copy = copy.deepcopy(players_copy)
+                players_copy.remove(i)
+                players_copy.remove(opponent)
+                if players_copy == []:
+                    pairs.append(x)
+                    break
+                else:
+                    pairs = recursivePairFinder2(pairings_table,
+                                                 players_copy, size)
+                if pairs is not False and pairs != []:
+                    pairs.append(x)
+                    break
+                elif pairs == False:
+                    players_copy = players_copy_copy
+        if pairs is not False and pairs != []:
+            break
+    if pairs == []:
+        return False
+    else:
+        return pairs
 

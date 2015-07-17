@@ -188,11 +188,11 @@ def runTestCase(is_new=False):
     #players_list = [row[0] for row in standings]
     numOfPlayers = len(playerStandings(tourney))
     count = 0
-
-    for i in range(int(math.ceil(math.log(numOfPlayers, 2)))):
+    rounds = int(math.ceil(math.log(numOfPlayers, 2)))
+    for i in range(rounds):
         count += 1
         print("round " + str(count))
-        current_round = i + 2
+        current_round = i + 1
         line_up = swissPairings(tourney)
         print(line_up)
         for x in line_up:
@@ -211,6 +211,8 @@ def runTestCase(is_new=False):
         print(str(rank) + ". " + i[1] + " --ID: " + str(i[0]))
         rank += 1
     endTournament()
+
+
 
 def playerRanks(t_id):
     db = connect()
@@ -239,8 +241,8 @@ def playerRanks(t_id):
     return ranks
 
 if __name__ == '__main__':
-    truncateAll()
-    runTestCase(True)
-    runTestCase()
+    #runTestCase()
     #endTournament()
+    line_up = swissPairings(1)
+    print(line_up)
     print "Success!  All tests pass!"

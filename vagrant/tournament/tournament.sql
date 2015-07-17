@@ -6,7 +6,7 @@
 
 -- Table: matches
 
-DROP TABLE matches;
+-- DROP TABLE matches;
 
 CREATE TABLE matches
 (
@@ -23,7 +23,7 @@ WITH (
 
 -- Table: members
 
-DROP TABLE members;
+-- DROP TABLE members;
 
 CREATE TABLE members
 (
@@ -39,7 +39,7 @@ WITH (
 
 -- Table: players
 
-DROP TABLE players;
+-- DROP TABLE players;
 
 CREATE TABLE players
 (
@@ -53,5 +53,6 @@ CREATE TABLE players
 WITH (
   OIDS=FALSE
 );
+
 
 
