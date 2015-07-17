@@ -421,19 +421,30 @@ def swissPairings(t_id):
     db = connect()
     c = db.cursor()
     c.execute("SELECT * FROM matches WHERE tourney_id = %s", (t_id,))
+    in_progress = c.fetchone()
+    db.commit()
+    db.close()
     num_of_players = countPlayers()
-    if c.fetchone() == None:
+    if in_progress == None:
         if num_of_players % 2 != 0:
+            db = connect()
+            c = db.cursor()
             c.execute("INSERT INTO players (id, name, seed_score) "
                       "VALUES (2147483647, 'BYE', 0)")
+            db.commit()
+            db.close()
+            num_of_players = countPlayers()
         pairs_list = initialPairing(t_id)
     else:
         pairs_list = subsequentPairings(t_id)
-    db.commit()
-    db.close()
-    if len(pairs_list) == (num_of_players/2):
+
+    if len(pairs_list) == (num_of_players / 2):
         return pairs_list
     else:
+        print(pairs_list)
+        print(len(pairs_list))
+        print(num_of_players)
+        print(num_of_players/2)
         raise ValueError("swissPairings is not returning the expected number "
                          "of pairs. This is most likely due to the number of"
                          "rounds for this style of tournament being exceeded.")
@@ -505,7 +516,6 @@ def remainingOpponents(t_id, p_id):
     """
     db = connect()
     c = db.cursor()
-    c.execute("DROP VIEW opponents")
     c.execute("CREATE OR REPLACE VIEW opponents "
               "AS SELECT p.id, "
               "ABS((SELECT SUM(match_outcome) FROM matches m "
@@ -548,9 +558,9 @@ def recursivePairFinder(pairings_table, players, size, pairs=[]):
         diff: the absolute difference in players' match points
     """
     if len(pairs) < size:
-        players_copy = copy.deepcopy(players)
-        pairs_copy = copy.deepcopy(pairs)
-        for p_id in players_copy:
+        for p_id in players:
+            players_copy = copy.deepcopy(players)
+            pairs_copy = copy.deepcopy(pairs)
             possible_pairs = pairings_table[p_id]  # list of possible pairs
             for x in possible_pairs:
                 possible_opponent = x[1]

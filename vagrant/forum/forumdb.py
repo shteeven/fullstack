@@ -12,9 +12,9 @@ def get_all_posts():  # Database connection
     :return posts:
     """
 
-    DB = psycopg2.connect("dbname=tournament")
+    DB = psycopg2.connect("dbname=forum")
     c = DB.cursor()
-    c.execute("SELECT player_id, match_id FROM matches ORDER BY player_id DESC")
+    c.execute("SELECT * FROM posts")
     posts = ({'content': str(row[1]), 'time': str(row[0])}
              for row in c.fetchall())
     return posts
@@ -26,11 +26,11 @@ def add_post(content):
     :param content:
     :return none:
     """
-    DB = psycopg2.connect("dbname=tournament")
+    DB = psycopg2.connect("dbname=forum")
     c = DB.cursor()
-    # c.execute("INSERT INTO posts (content) VALUES (%s)", (content,))
-    # c.execute("DELETE FROM posts WHERE content LIKE '%cheese%'")
-    # DB.commit()
+    c.execute("INSERT INTO posts (content) VALUES (%s)", (content,))
+    c.execute("DELETE FROM posts WHERE content LIKE '%cheese%'")
+    DB.commit()
     DB.close()
 
 
