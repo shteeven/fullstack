@@ -558,9 +558,9 @@ def recursivePairFinder(pairings_table, players, size, pairs=[]):
         diff: the absolute difference in players' match points
     """
     if len(pairs) < size:
-        for p_id in players:
-            players_copy = copy.deepcopy(players)
-            pairs_copy = copy.deepcopy(pairs)
+        players_copy = copy.deepcopy(players)
+        pairs_copy = copy.deepcopy(pairs)
+        for p_id in players_copy:
             possible_pairs = pairings_table[p_id]  # list of possible pairs
             for x in possible_pairs:
                 possible_opponent = x[1]
