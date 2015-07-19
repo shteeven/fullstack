@@ -420,7 +420,9 @@ def swissPairings(t_id):
     """
     db = connect()
     c = db.cursor()
-    c.execute("SELECT * FROM matches WHERE tourney_id = %s", (t_id,))
+    c.execute("SELECT * "
+              "FROM matches "
+              "WHERE tourney_id = %s", (t_id,))
     in_progress = c.fetchone()
     db.commit()
     db.close()
@@ -436,7 +438,7 @@ def swissPairings(t_id):
             num_of_players = countPlayers()
         pairs_list = initialPairing(t_id)
     else:
-        pairs_list = subsequentPairings(t_id)
+        pairs_list = subsequentPairings2(t_id)
     if len(pairs_list) == (num_of_players / 2):
         return pairs_list
     else:
@@ -489,10 +491,8 @@ def subsequentPairings(t_id):
     pairings_table = {}
     players_by_points = [i[0] for i in players]
     num_of_players = countPlayers()/2
-    for i in players_by_points:
-        pairings_table[i] = remainingOpponents(t_id, i)
     pairs_list = recursivePairFinder2(
-        pairings_table, players_by_points, num_of_players)
+        t_id, players_by_points, num_of_players)
     return pairs_list
 
 
@@ -533,7 +533,7 @@ def remainingOpponents(t_id, p_id):
     return remaining_opp
 
 
-def recursivePairFinder(pairings_table, players, size, pairs=[]):
+def recursivePairFinder(t_id, players, size, pairs=[]):
     """Returns a list with the best combination of pairings. It tries to
     match the players with the same match points, if more than one option is
     available, it will try to pair the player with the lowest ranked player of
@@ -552,34 +552,13 @@ def recursivePairFinder(pairings_table, players, size, pairs=[]):
         id2: the second player's unique id
         diff: the absolute difference in players' match points
     """
-    if len(pairs) < size:
-        players_copy = copy.deepcopy(players)
-        pairs_copy = copy.deepcopy(pairs)
-        for p_id in players_copy:
-            possible_pairs = pairings_table[p_id]  # list of possible pairs
-            for x in possible_pairs:
-                possible_opponent = x[1]
-                if possible_opponent in players_copy and p_id in players_copy:
-                    pairs_copy.append(x)
-                    players_copy.remove(possible_opponent)
-                    players_copy.remove(p_id)
-                    pairs = recursivePairFinder(pairings_table,
-                                        players_copy, size, pairs_copy)
-                    if len(pairs) >= size:
-                        break
-            if len(pairs) >= size:
-                break
-    return pairs
-
-
-def recursivePairFinder2(pairings_table, players, size):
     pairs = []
     try:
         players_copy
     except NameError:
         players_copy = copy.deepcopy(players)
     for i in players:
-        opponents = pairings_table[i]
+        opponents = remainingOpponents(t_id, i)
         for x in opponents:
             opponent = x[1]
             if opponent in players_copy and i in players_copy:
@@ -590,7 +569,7 @@ def recursivePairFinder2(pairings_table, players, size):
                     pairs.append(x)
                     break
                 else:
-                    pairs = recursivePairFinder2(pairings_table,
+                    pairs = recursivePairFinder2(t_id,
                                                  players_copy, size)
                 if pairs is not False and pairs != []:
                     pairs.append(x)
@@ -604,3 +583,112 @@ def recursivePairFinder2(pairings_table, players, size):
     else:
         return pairs
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def subsequentPairings2(t_id):
+    """This is a function that follows the initial pairing function. If there
+    are no records for this tourney in the matches table, it will fail to run.
+    Returns a list of pairs of players for the next round of a tourney. Relies
+    on recursivePairFinder() to find the best pairing combination.
+
+    Args:
+      t_id: the tournament id.
+
+    Returns:
+      A list of tuples, each of which contains (id1, id2, diff)
+        id1: the first player's unique id
+        id2: the second player's unique id
+        diff: the absolute difference in players' match points
+    """
+    players = playerStandings(t_id)
+    pairings_table = {}
+    players_by_points = [i[0] for i in players]
+    num_of_players = countPlayers()/2
+    pairs_list = recursivePairFinder2(
+        t_id, players_by_points, num_of_players)
+    return pairs_list
+
+
+def recursivePairFinder2(t_id, players, size):
+    pairs = []
+    try:
+        players_copy
+    except NameError:
+        players_copy = copy.deepcopy(players)
+    for i in players:
+        opponents = remainingOpponents(t_id, i)
+        for x in opponents:
+            opponent = x[1]
+            if opponent in players_copy and i in players_copy:
+                players_copy_copy = copy.deepcopy(players_copy)
+                players_copy.remove(i)
+                players_copy.remove(opponent)
+                if players_copy == []:
+                    pairs.append(x)
+                    break
+                else:
+                    pairs = recursivePairFinder2(t_id,
+                                                 players_copy, size)
+                if pairs is not False and pairs != []:
+                    pairs.append(x)
+                    break
+                elif pairs == False:
+                    players_copy = players_copy_copy
+        if pairs is not False and pairs != []:
+            break
+    if pairs == []:
+        return False
+    else:
+        return pairs
+
+
+def remainingOpponents2(t_id, p_id):
+    """Returns a list opponents that player had not yet had a match with.
+
+    The first entry in the list should be the opponent with the closest amount
+    of match_points.
+
+    Returns:
+      A list of tuples, each of which contains (id, opponent_id,
+      diff):
+        id: the player's unique id (assigned by the database)
+        opponent_id: the opponent's unique id (assigned by the database)
+        diff: absolute difference in match_point totals
+    """
+    db = connect()
+    c = db.cursor()
+    c.execute("CREATE OR REPLACE VIEW opponents "
+              "AS SELECT p.id, "
+              "ABS((SELECT SUM(match_outcome) FROM matches m "
+              "WHERE p.id = m.player_id) - "
+              "(SELECT SUM(match_outcome) FROM matches m "
+              "WHERE %s = m.player_id)) AS diff "
+              "FROM players p, matches m "
+              "WHERE p.id != %s AND p.id NOT IN "
+              "(SELECT opponent_id FROM matches WHERE player_id = %s "
+              "AND tourney_id = %s) "
+              "GROUP BY p.id "
+              "ORDER BY diff", (p_id, p_id, p_id, t_id))
+    c.execute("SELECT (SELECT id FROM players WHERE id = %s), "
+              "o.id, o.diff  FROM opponents o, players p "
+              "WHERE p.id = o.id "
+              "ORDER BY o.diff, p.seed_score", (p_id,))
+    remaining_opp = c.fetchall()
+    db.commit()
+    db.close()
+    return remaining_opp

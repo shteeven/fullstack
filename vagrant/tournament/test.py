@@ -135,13 +135,75 @@ def createTestCase():
     truncateAll()
     players = [registerMember("A"), registerMember("B"),
                registerMember("C"), registerMember("D"),
-               registerMember("E")]#, registerMember("F"),
-               # registerMember("G"), registerMember("H"),
-               # registerMember("I"), registerMember("J"),
-               # registerMember("K"), registerMember("L"),
-               # registerMember("M"), registerMember("N"),
-               # registerMember("O"), registerMember("P"),
-               # registerMember("Q"), registerMember("R")]
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),
+               registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),
+               registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),
+               registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),
+               registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),
+               registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),
+               registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R")]
     db = connect()
     c = db.cursor()
     x = countMembers()
@@ -241,8 +303,9 @@ def playerRanks(t_id):
     return ranks
 
 if __name__ == '__main__':
-    #runTestCase()
-    #endTournament()
-    line_up = swissPairings(1)
-    print(line_up)
+    runTestCase(True)
+
+    endTournament()
+    #line_up = swissPairings(1)
+    #print(line_up)
     print "Success!  All tests pass!"

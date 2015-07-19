@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a756eb5b-39c4-4bd8-9222-e20e5271d6cd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/test.py" afterPath="$PROJECT_DIR$/tournament/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournament.sql" afterPath="$PROJECT_DIR$/tournament/tournament.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournamentdb.py" afterPath="$PROJECT_DIR$/tournament/tournamentdb.py" />
     </list>
     <ignored path="vagrant.iws" />
@@ -20,7 +19,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/vagrant$tournament.coverage" NAME="tournament Coverage Results" MODIFIED="1436591891518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$swiss.coverage" NAME="swiss Coverage Results" MODIFIED="1435825894249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/vagrant$test.coverage" NAME="test Coverage Results" MODIFIED="1437144118976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
+    <SUITE FILE_PATH="coverage/vagrant$test.coverage" NAME="test Coverage Results" MODIFIED="1437278553208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$stable_match.coverage" NAME="stable_match Coverage Results" MODIFIED="1435216425798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$swisspairing.coverage" NAME="swisspairing Coverage Results" MODIFIED="1436935988387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$forum.coverage" NAME="forum Coverage Results" MODIFIED="1434375677523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/forum" />
@@ -52,40 +51,88 @@
       <file leaf-file-name="tournamentdb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tournament/tournamentdb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7777777">
-              <caret line="493" column="0" selection-start-line="493" selection-start-column="0" selection-end-line="493" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="422" column="23" selection-start-line="422" selection-start-column="23" selection-end-line="422" selection-end-column="23" />
               <folding>
-                <marker date="1437144118000" expanded="true" signature="1204:1235" placeholder="DELETE FROM ..." />
-                <marker date="1437144118000" expanded="true" signature="1473:1504" placeholder="DELETE FROM ..." />
-                <marker date="1437144118000" expanded="true" signature="1779:1853" placeholder="DELETE FROM ..." />
-                <marker date="1437144118000" expanded="true" signature="2093:2149" placeholder="DELETE FROM ..." />
-                <marker date="1437144118000" expanded="true" signature="2332:2360" placeholder="SELECT count..members..." />
-                <marker date="1437144118000" expanded="true" signature="2586:2614" placeholder="SELECT count..players..." />
-                <marker date="1437144118000" expanded="true" signature="2954:3011" placeholder="INSERT INTO ..." />
-                <marker date="1437144118000" expanded="true" signature="3038:3074" placeholder="SELECT id FR..members..." />
-                <marker date="1437144118000" expanded="true" signature="3384:3574" placeholder="INSERT INTO ..." />
-                <marker date="1437144118000" expanded="true" signature="3444:3574" placeholder="SELECT id, n..members..." />
-                <marker date="1437144118000" expanded="true" signature="4223:4394" placeholder="SELECT id, n..members..." />
-                <marker date="1437144118000" expanded="true" signature="5040:5136" placeholder="SELECT id, n..members..." />
-                <marker date="1437144118000" expanded="true" signature="5773:5866" placeholder="SELECT id, s..players..." />
-                <marker date="1437144118000" expanded="true" signature="6514:6610" placeholder="SELECT id, n..players..." />
-                <marker date="1437144118000" expanded="true" signature="7199:7507" placeholder="SELECT p.id,..players..." />
-                <marker date="1437144118000" expanded="true" signature="7256:7371" placeholder="SELECT SUM(m..matches..." />
-                <marker date="1437144118000" expanded="true" signature="8160:8276" placeholder="UPDATE playe..." />
-                <marker date="1437144118000" expanded="true" signature="8346:8462" placeholder="UPDATE playe..." />
-                <marker date="1437144118000" expanded="true" signature="8537:8688" placeholder="INSERT INTO ..." />
-                <marker date="1437144118000" expanded="true" signature="8801:8951" placeholder="INSERT INTO ..." />
-                <marker date="1437144118000" expanded="true" signature="9145:9241" placeholder="UPDATE playe..." />
-                <marker date="1437144118000" expanded="true" signature="9310:9425" placeholder="UPDATE playe..." />
-                <marker date="1437144118000" expanded="true" signature="9498:9649" placeholder="INSERT INTO ..." />
-                <marker date="1437144118000" expanded="true" signature="9761:9912" placeholder="INSERT INTO ..." />
-                <marker date="1437144118000" expanded="true" signature="10977:11420" placeholder="SELECT o.pla..players..." />
-                <marker date="1437144118000" expanded="true" signature="11039:11221" placeholder="SELECT SUM(o..omw..." />
-                <marker date="1437144118000" expanded="true" signature="11758:11918" placeholder="UPDATE membe..." />
-                <marker date="1437144118000" expanded="true" signature="12914:12955" placeholder="SELECT * FRO..matches..." />
-                <marker date="1437144118000" expanded="true" signature="13209:13306" placeholder="INSERT INTO ..." />
-                <marker date="1437144118000" expanded="true" signature="16821:17008" placeholder="SELECT (SELE..opponents..." />
-                <marker date="1437144118000" expanded="true" signature="16829:16863" placeholder="SELECT id FR..players..." />
+                <element signature="e#147#304#0" expanded="false" />
+                <element signature="e#334#492#0" expanded="false" />
+                <element signature="e#522#685#0" expanded="false" />
+                <element signature="e#715#872#0" expanded="false" />
+                <element signature="e#898#1033#0" expanded="false" />
+                <element signature="e#1064#1279#0" expanded="false" />
+                <element signature="e#1064#1149#1" expanded="false" />
+                <element signature="e#1310#1548#0" expanded="false" />
+                <element signature="e#1310#1418#1" expanded="false" />
+                <element signature="e#1586#1903#0" expanded="false" />
+                <element signature="e#1586#1724#1" expanded="false" />
+                <element signature="e#1935#2193#0" expanded="false" />
+                <element signature="e#1935#2038#1" expanded="false" />
+                <element signature="e#2220#2440#0" expanded="false" />
+                <element signature="e#2467#2694#0" expanded="false" />
+                <element signature="e#2727#3168#0" expanded="false" />
+                <element signature="e#2727#2899#1" expanded="false" />
+                <element signature="e#3201#3618#0" expanded="false" />
+                <element signature="e#3201#3329#1" expanded="false" />
+                <element signature="e#3649#4473#0" expanded="false" />
+                <element signature="e#3649#4168#1" expanded="false" />
+                <element signature="e#4501#5215#0" expanded="false" />
+                <element signature="e#4501#4985#1" expanded="false" />
+                <element signature="e#5244#5945#0" expanded="false" />
+                <element signature="e#5244#5718#1" expanded="false" />
+                <element signature="e#5973#6689#0" expanded="false" />
+                <element signature="e#5973#6459#1" expanded="false" />
+                <element signature="e#6723#7595#0" expanded="false" />
+                <element signature="e#6723#7144#1" expanded="false" />
+                <element signature="e#7660#10075#0" expanded="false" />
+                <element signature="e#7660#8010#1" expanded="false" />
+                <element signature="e#10105#11518#0" expanded="false" />
+                <element signature="e#10105#10579#1" expanded="false" />
+                <element signature="e#11546#12043#0" expanded="false" />
+                <element signature="e#11546#11703#1" expanded="false" />
+                <element signature="e#12075#12859#1" expanded="false" />
+                <element signature="e#13886#14742#0" expanded="false" />
+                <element signature="e#13886#14507#1" expanded="false" />
+                <element signature="e#14779#15353#1" expanded="false" />
+                <element signature="e#15652#17045#0" expanded="false" />
+                <element signature="e#15652#16113#1" expanded="false" />
+                <element signature="e#17108#17940#1" expanded="false" />
+                <element signature="e#21001#22394#0" expanded="false" />
+                <element signature="e#21001#21462#1" expanded="false" />
+                <marker date="1437278838000" expanded="false" signature="1204:1235" placeholder="DELETE FROM ..." />
+                <marker date="1437278838000" expanded="false" signature="1473:1504" placeholder="DELETE FROM ..." />
+                <marker date="1437278838000" expanded="false" signature="1779:1853" placeholder="DELETE FROM ..." />
+                <marker date="1437278838000" expanded="false" signature="2093:2149" placeholder="DELETE FROM ..." />
+                <marker date="1437278838000" expanded="false" signature="2332:2360" placeholder="SELECT count..members..." />
+                <marker date="1437278838000" expanded="false" signature="2586:2614" placeholder="SELECT count..players..." />
+                <marker date="1437278838000" expanded="false" signature="2954:3011" placeholder="INSERT INTO ..." />
+                <marker date="1437278838000" expanded="false" signature="3038:3074" placeholder="SELECT id FR..members..." />
+                <marker date="1437278838000" expanded="false" signature="3384:3574" placeholder="INSERT INTO ..." />
+                <marker date="1437278838000" expanded="false" signature="3444:3574" placeholder="SELECT id, n..members..." />
+                <marker date="1437278838000" expanded="false" signature="4223:4394" placeholder="SELECT id, n..members..." />
+                <marker date="1437278838000" expanded="false" signature="5040:5136" placeholder="SELECT id, n..members..." />
+                <marker date="1437278838000" expanded="false" signature="5773:5866" placeholder="SELECT id, s..players..." />
+                <marker date="1437278838000" expanded="false" signature="6514:6610" placeholder="SELECT id, n..players..." />
+                <marker date="1437278838000" expanded="false" signature="7199:7507" placeholder="SELECT p.id,..players..." />
+                <marker date="1437278838000" expanded="false" signature="7256:7371" placeholder="SELECT SUM(m..matches..." />
+                <marker date="1437278838000" expanded="false" signature="8160:8276" placeholder="UPDATE playe..." />
+                <marker date="1437278838000" expanded="false" signature="8346:8462" placeholder="UPDATE playe..." />
+                <marker date="1437278838000" expanded="false" signature="8537:8688" placeholder="INSERT INTO ..." />
+                <marker date="1437278838000" expanded="false" signature="8801:8951" placeholder="INSERT INTO ..." />
+                <marker date="1437278838000" expanded="false" signature="9145:9241" placeholder="UPDATE playe..." />
+                <marker date="1437278838000" expanded="false" signature="9310:9425" placeholder="UPDATE playe..." />
+                <marker date="1437278838000" expanded="false" signature="9498:9649" placeholder="INSERT INTO ..." />
+                <marker date="1437278838000" expanded="false" signature="9761:9912" placeholder="INSERT INTO ..." />
+                <marker date="1437278838000" expanded="false" signature="10977:11420" placeholder="SELECT o.pla..players..." />
+                <marker date="1437278838000" expanded="false" signature="11039:11221" placeholder="SELECT SUM(o..omw..." />
+                <marker date="1437278838000" expanded="false" signature="11758:11918" placeholder="UPDATE membe..." />
+                <marker date="1437278838000" expanded="true" signature="12914:12989" placeholder="SELECT * FRO..matches..." />
+                <marker date="1437278838000" expanded="true" signature="12914:12991" placeholder="SELECT match..matches..." />
+                <marker date="1437278838000" expanded="true" signature="12914:13002" placeholder="SELECT match..matches..." />
+                <marker date="1437278838000" expanded="false" signature="13243:13340" placeholder="INSERT INTO ..." />
+                <marker date="1437278838000" expanded="false" signature="16758:16945" placeholder="SELECT (SELE..opponents..." />
+                <marker date="1437278838000" expanded="false" signature="16766:16800" placeholder="SELECT id FR..players..." />
+                <marker date="1437278838000" expanded="false" signature="22107:22294" placeholder="SELECT (SELE..opponents..." />
+                <marker date="1437278838000" expanded="false" signature="22115:22149" placeholder="SELECT id FR..players..." />
               </folding>
             </state>
           </provider>
@@ -94,8 +141,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tournament/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8598131">
-              <caret line="245" column="29" selection-start-line="245" selection-start-column="29" selection-end-line="245" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.42056075">
+              <caret line="219" column="30" selection-start-line="219" selection-start-column="30" selection-end-line="219" selection-end-column="30" />
               <folding>
                 <element signature="e#138#492#0" expanded="false" />
                 <element signature="e#524#880#0" expanded="false" />
@@ -104,13 +151,14 @@
                 <element signature="e#1715#2826#0" expanded="false" />
                 <element signature="e#2856#4612#0" expanded="false" />
                 <element signature="e#2856#2957#1" expanded="false" />
+                <element signature="e#4641#9300#0" expanded="false" />
                 <element signature="e#4641#4908#1" expanded="false" />
-                <element signature="e#5777#6044#1" expanded="false" />
-                <element signature="e#7543#8509#0" expanded="false" />
-                <marker date="1437131760000" expanded="false" signature="5595:5691" placeholder="UPDATE membe..." />
-                <marker date="1437131760000" expanded="false" signature="6215:6353" placeholder="SELECT tourn..matches..." />
-                <marker date="1437131760000" expanded="false" signature="7968:8411" placeholder="SELECT o.pla..players..." />
-                <marker date="1437131760000" expanded="false" signature="8030:8212" placeholder="SELECT SUM(o..omw..." />
+                <element signature="e#9338#9605#1" expanded="false" />
+                <element signature="e#11104#12070#0" expanded="false" />
+                <marker date="1437144827000" expanded="true" signature="9156:9252" placeholder="UPDATE membe..." />
+                <marker date="1437144827000" expanded="true" signature="9776:9914" placeholder="SELECT tourn..matches..." />
+                <marker date="1437144827000" expanded="true" signature="11529:11972" placeholder="SELECT o.pla..players..." />
+                <marker date="1437144827000" expanded="true" signature="11591:11773" placeholder="SELECT SUM(o..omw..." />
               </folding>
             </state>
           </provider>
@@ -606,7 +654,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18497577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18497577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1155,48 +1203,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tournament/tournamentdb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7777777">
-          <caret line="493" column="0" selection-start-line="493" selection-start-column="0" selection-end-line="493" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="422" column="23" selection-start-line="422" selection-start-column="23" selection-end-line="422" selection-end-column="23" />
           <folding>
-            <marker date="1437144118000" expanded="true" signature="1204:1235" placeholder="DELETE FROM ..." />
-            <marker date="1437144118000" expanded="true" signature="1473:1504" placeholder="DELETE FROM ..." />
-            <marker date="1437144118000" expanded="true" signature="1779:1853" placeholder="DELETE FROM ..." />
-            <marker date="1437144118000" expanded="true" signature="2093:2149" placeholder="DELETE FROM ..." />
-            <marker date="1437144118000" expanded="true" signature="2332:2360" placeholder="SELECT count..members..." />
-            <marker date="1437144118000" expanded="true" signature="2586:2614" placeholder="SELECT count..players..." />
-            <marker date="1437144118000" expanded="true" signature="2954:3011" placeholder="INSERT INTO ..." />
-            <marker date="1437144118000" expanded="true" signature="3038:3074" placeholder="SELECT id FR..members..." />
-            <marker date="1437144118000" expanded="true" signature="3384:3574" placeholder="INSERT INTO ..." />
-            <marker date="1437144118000" expanded="true" signature="3444:3574" placeholder="SELECT id, n..members..." />
-            <marker date="1437144118000" expanded="true" signature="4223:4394" placeholder="SELECT id, n..members..." />
-            <marker date="1437144118000" expanded="true" signature="5040:5136" placeholder="SELECT id, n..members..." />
-            <marker date="1437144118000" expanded="true" signature="5773:5866" placeholder="SELECT id, s..players..." />
-            <marker date="1437144118000" expanded="true" signature="6514:6610" placeholder="SELECT id, n..players..." />
-            <marker date="1437144118000" expanded="true" signature="7199:7507" placeholder="SELECT p.id,..players..." />
-            <marker date="1437144118000" expanded="true" signature="7256:7371" placeholder="SELECT SUM(m..matches..." />
-            <marker date="1437144118000" expanded="true" signature="8160:8276" placeholder="UPDATE playe..." />
-            <marker date="1437144118000" expanded="true" signature="8346:8462" placeholder="UPDATE playe..." />
-            <marker date="1437144118000" expanded="true" signature="8537:8688" placeholder="INSERT INTO ..." />
-            <marker date="1437144118000" expanded="true" signature="8801:8951" placeholder="INSERT INTO ..." />
-            <marker date="1437144118000" expanded="true" signature="9145:9241" placeholder="UPDATE playe..." />
-            <marker date="1437144118000" expanded="true" signature="9310:9425" placeholder="UPDATE playe..." />
-            <marker date="1437144118000" expanded="true" signature="9498:9649" placeholder="INSERT INTO ..." />
-            <marker date="1437144118000" expanded="true" signature="9761:9912" placeholder="INSERT INTO ..." />
-            <marker date="1437144118000" expanded="true" signature="10977:11420" placeholder="SELECT o.pla..players..." />
-            <marker date="1437144118000" expanded="true" signature="11039:11221" placeholder="SELECT SUM(o..omw..." />
-            <marker date="1437144118000" expanded="true" signature="11758:11918" placeholder="UPDATE membe..." />
-            <marker date="1437144118000" expanded="true" signature="12914:12955" placeholder="SELECT * FRO..matches..." />
-            <marker date="1437144118000" expanded="true" signature="13209:13306" placeholder="INSERT INTO ..." />
-            <marker date="1437144118000" expanded="true" signature="16821:17008" placeholder="SELECT (SELE..opponents..." />
-            <marker date="1437144118000" expanded="true" signature="16829:16863" placeholder="SELECT id FR..players..." />
+            <element signature="e#147#304#0" expanded="false" />
+            <element signature="e#334#492#0" expanded="false" />
+            <element signature="e#522#685#0" expanded="false" />
+            <element signature="e#715#872#0" expanded="false" />
+            <element signature="e#898#1033#0" expanded="false" />
+            <element signature="e#1064#1279#0" expanded="false" />
+            <element signature="e#1064#1149#1" expanded="false" />
+            <element signature="e#1310#1548#0" expanded="false" />
+            <element signature="e#1310#1418#1" expanded="false" />
+            <element signature="e#1586#1903#0" expanded="false" />
+            <element signature="e#1586#1724#1" expanded="false" />
+            <element signature="e#1935#2193#0" expanded="false" />
+            <element signature="e#1935#2038#1" expanded="false" />
+            <element signature="e#2220#2440#0" expanded="false" />
+            <element signature="e#2467#2694#0" expanded="false" />
+            <element signature="e#2727#3168#0" expanded="false" />
+            <element signature="e#2727#2899#1" expanded="false" />
+            <element signature="e#3201#3618#0" expanded="false" />
+            <element signature="e#3201#3329#1" expanded="false" />
+            <element signature="e#3649#4473#0" expanded="false" />
+            <element signature="e#3649#4168#1" expanded="false" />
+            <element signature="e#4501#5215#0" expanded="false" />
+            <element signature="e#4501#4985#1" expanded="false" />
+            <element signature="e#5244#5945#0" expanded="false" />
+            <element signature="e#5244#5718#1" expanded="false" />
+            <element signature="e#5973#6689#0" expanded="false" />
+            <element signature="e#5973#6459#1" expanded="false" />
+            <element signature="e#6723#7595#0" expanded="false" />
+            <element signature="e#6723#7144#1" expanded="false" />
+            <element signature="e#7660#10075#0" expanded="false" />
+            <element signature="e#7660#8010#1" expanded="false" />
+            <element signature="e#10105#11518#0" expanded="false" />
+            <element signature="e#10105#10579#1" expanded="false" />
+            <element signature="e#11546#12043#0" expanded="false" />
+            <element signature="e#11546#11703#1" expanded="false" />
+            <element signature="e#12075#12859#1" expanded="false" />
+            <element signature="e#13886#14742#0" expanded="false" />
+            <element signature="e#13886#14507#1" expanded="false" />
+            <element signature="e#14779#15353#1" expanded="false" />
+            <element signature="e#15652#17045#0" expanded="false" />
+            <element signature="e#15652#16113#1" expanded="false" />
+            <element signature="e#17108#17940#1" expanded="false" />
+            <element signature="e#21001#22394#0" expanded="false" />
+            <element signature="e#21001#21462#1" expanded="false" />
+            <marker date="1437278838000" expanded="false" signature="1204:1235" placeholder="DELETE FROM ..." />
+            <marker date="1437278838000" expanded="false" signature="1473:1504" placeholder="DELETE FROM ..." />
+            <marker date="1437278838000" expanded="false" signature="1779:1853" placeholder="DELETE FROM ..." />
+            <marker date="1437278838000" expanded="false" signature="2093:2149" placeholder="DELETE FROM ..." />
+            <marker date="1437278838000" expanded="false" signature="2332:2360" placeholder="SELECT count..members..." />
+            <marker date="1437278838000" expanded="false" signature="2586:2614" placeholder="SELECT count..players..." />
+            <marker date="1437278838000" expanded="false" signature="2954:3011" placeholder="INSERT INTO ..." />
+            <marker date="1437278838000" expanded="false" signature="3038:3074" placeholder="SELECT id FR..members..." />
+            <marker date="1437278838000" expanded="false" signature="3384:3574" placeholder="INSERT INTO ..." />
+            <marker date="1437278838000" expanded="false" signature="3444:3574" placeholder="SELECT id, n..members..." />
+            <marker date="1437278838000" expanded="false" signature="4223:4394" placeholder="SELECT id, n..members..." />
+            <marker date="1437278838000" expanded="false" signature="5040:5136" placeholder="SELECT id, n..members..." />
+            <marker date="1437278838000" expanded="false" signature="5773:5866" placeholder="SELECT id, s..players..." />
+            <marker date="1437278838000" expanded="false" signature="6514:6610" placeholder="SELECT id, n..players..." />
+            <marker date="1437278838000" expanded="false" signature="7199:7507" placeholder="SELECT p.id,..players..." />
+            <marker date="1437278838000" expanded="false" signature="7256:7371" placeholder="SELECT SUM(m..matches..." />
+            <marker date="1437278838000" expanded="false" signature="8160:8276" placeholder="UPDATE playe..." />
+            <marker date="1437278838000" expanded="false" signature="8346:8462" placeholder="UPDATE playe..." />
+            <marker date="1437278838000" expanded="false" signature="8537:8688" placeholder="INSERT INTO ..." />
+            <marker date="1437278838000" expanded="false" signature="8801:8951" placeholder="INSERT INTO ..." />
+            <marker date="1437278838000" expanded="false" signature="9145:9241" placeholder="UPDATE playe..." />
+            <marker date="1437278838000" expanded="false" signature="9310:9425" placeholder="UPDATE playe..." />
+            <marker date="1437278838000" expanded="false" signature="9498:9649" placeholder="INSERT INTO ..." />
+            <marker date="1437278838000" expanded="false" signature="9761:9912" placeholder="INSERT INTO ..." />
+            <marker date="1437278838000" expanded="false" signature="10977:11420" placeholder="SELECT o.pla..players..." />
+            <marker date="1437278838000" expanded="false" signature="11039:11221" placeholder="SELECT SUM(o..omw..." />
+            <marker date="1437278838000" expanded="false" signature="11758:11918" placeholder="UPDATE membe..." />
+            <marker date="1437278838000" expanded="true" signature="12914:12989" placeholder="SELECT * FRO..matches..." />
+            <marker date="1437278838000" expanded="true" signature="12914:12991" placeholder="SELECT match..matches..." />
+            <marker date="1437278838000" expanded="true" signature="12914:13002" placeholder="SELECT match..matches..." />
+            <marker date="1437278838000" expanded="false" signature="13243:13340" placeholder="INSERT INTO ..." />
+            <marker date="1437278838000" expanded="false" signature="16758:16945" placeholder="SELECT (SELE..opponents..." />
+            <marker date="1437278838000" expanded="false" signature="16766:16800" placeholder="SELECT id FR..players..." />
+            <marker date="1437278838000" expanded="false" signature="22107:22294" placeholder="SELECT (SELE..opponents..." />
+            <marker date="1437278838000" expanded="false" signature="22115:22149" placeholder="SELECT id FR..players..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tournament/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8598131">
-          <caret line="245" column="29" selection-start-line="245" selection-start-column="29" selection-end-line="245" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.42056075">
+          <caret line="219" column="30" selection-start-line="219" selection-start-column="30" selection-end-line="219" selection-end-column="30" />
           <folding>
             <element signature="e#138#492#0" expanded="false" />
             <element signature="e#524#880#0" expanded="false" />
@@ -1205,13 +1301,14 @@
             <element signature="e#1715#2826#0" expanded="false" />
             <element signature="e#2856#4612#0" expanded="false" />
             <element signature="e#2856#2957#1" expanded="false" />
+            <element signature="e#4641#9300#0" expanded="false" />
             <element signature="e#4641#4908#1" expanded="false" />
-            <element signature="e#5777#6044#1" expanded="false" />
-            <element signature="e#7543#8509#0" expanded="false" />
-            <marker date="1437131760000" expanded="false" signature="5595:5691" placeholder="UPDATE membe..." />
-            <marker date="1437131760000" expanded="false" signature="6215:6353" placeholder="SELECT tourn..matches..." />
-            <marker date="1437131760000" expanded="false" signature="7968:8411" placeholder="SELECT o.pla..players..." />
-            <marker date="1437131760000" expanded="false" signature="8030:8212" placeholder="SELECT SUM(o..omw..." />
+            <element signature="e#9338#9605#1" expanded="false" />
+            <element signature="e#11104#12070#0" expanded="false" />
+            <marker date="1437144827000" expanded="true" signature="9156:9252" placeholder="UPDATE membe..." />
+            <marker date="1437144827000" expanded="true" signature="9776:9914" placeholder="SELECT tourn..matches..." />
+            <marker date="1437144827000" expanded="true" signature="11529:11972" placeholder="SELECT o.pla..players..." />
+            <marker date="1437144827000" expanded="true" signature="11591:11773" placeholder="SELECT SUM(o..omw..." />
           </folding>
         </state>
       </provider>
