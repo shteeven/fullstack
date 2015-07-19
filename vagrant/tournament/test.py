@@ -125,7 +125,7 @@ def testReportMatch():
     print(func_name + " passed!")
 
 
-def createTestCase():
+def createTestSet():
     """
     Create mock records. Create mock tourney with rounds. Modify algorithm
     to have players face opponents within their own brackets of each round,
@@ -137,73 +137,74 @@ def createTestCase():
                registerMember("C"), registerMember("D"),
                registerMember("E"), registerMember("F"),
                registerMember("G"), registerMember("H"),
-               registerMember("I"), registerMember("J"),
-               registerMember("K"), registerMember("L"),
-               registerMember("M"), registerMember("N"),
-               registerMember("O"), registerMember("P"),
-               registerMember("Q"), registerMember("R"),
-               registerMember("A"), registerMember("B"),
-               registerMember("C"), registerMember("D"),
-               registerMember("E"), registerMember("F"),
-               registerMember("G"), registerMember("H"),
-               registerMember("I"), registerMember("J"),
-               registerMember("K"), registerMember("L"),
-               registerMember("M"), registerMember("N"),
-               registerMember("O"), registerMember("P"),
-               registerMember("Q"), registerMember("R"),
-               registerMember("A"), registerMember("B"),
-               registerMember("C"), registerMember("D"),
-               registerMember("E"), registerMember("F"),
-               registerMember("G"), registerMember("H"),
-               registerMember("I"), registerMember("J"),
-               registerMember("K"), registerMember("L"),
-               registerMember("M"), registerMember("N"),
-               registerMember("O"), registerMember("P"),
-               registerMember("Q"), registerMember("R"),
-               registerMember("A"), registerMember("B"),
-               registerMember("C"), registerMember("D"),
-               registerMember("E"), registerMember("F"),
-               registerMember("G"), registerMember("H"),
-               registerMember("I"), registerMember("J"),
-               registerMember("K"), registerMember("L"),
-               registerMember("M"), registerMember("N"),
-               registerMember("O"), registerMember("P"),
-               registerMember("Q"), registerMember("R"),registerMember("A"), registerMember("B"),
-               registerMember("C"), registerMember("D"),
-               registerMember("E"), registerMember("F"),
-               registerMember("G"), registerMember("H"),
-               registerMember("I"), registerMember("J"),
-               registerMember("K"), registerMember("L"),
-               registerMember("M"), registerMember("N"),
-               registerMember("O"), registerMember("P"),
-               registerMember("Q"), registerMember("R"),
-               registerMember("A"), registerMember("B"),
-               registerMember("C"), registerMember("D"),
-               registerMember("E"), registerMember("F"),
-               registerMember("G"), registerMember("H"),
-               registerMember("I"), registerMember("J"),
-               registerMember("K"), registerMember("L"),
-               registerMember("M"), registerMember("N"),
-               registerMember("O"), registerMember("P"),
-               registerMember("Q"), registerMember("R"),
-               registerMember("A"), registerMember("B"),
-               registerMember("C"), registerMember("D"),
-               registerMember("E"), registerMember("F"),
-               registerMember("G"), registerMember("H"),
-               registerMember("I"), registerMember("J"),
-               registerMember("K"), registerMember("L"),
-               registerMember("M"), registerMember("N"),
-               registerMember("O"), registerMember("P"),
-               registerMember("Q"), registerMember("R"),
-               registerMember("A"), registerMember("B"),
-               registerMember("C"), registerMember("D"),
-               registerMember("E"), registerMember("F"),
-               registerMember("G"), registerMember("H"),
-               registerMember("I"), registerMember("J"),
-               registerMember("K"), registerMember("L"),
-               registerMember("M"), registerMember("N"),
-               registerMember("O"), registerMember("P"),
-               registerMember("Q"), registerMember("R")]
+               registerMember("I")]  # registerMember("J"),]
+               # registerMember("K"), registerMember("L"),
+               # registerMember("M"), registerMember("N"),
+               # registerMember("O"), registerMember("P"),
+               # registerMember("Q"), registerMember("R"),
+               # registerMember("A"), registerMember("B"),
+               # registerMember("C"), registerMember("D"),
+               # registerMember("E"), registerMember("F"),
+               # registerMember("G"), registerMember("H"),
+               # registerMember("I"), registerMember("J"),
+               # registerMember("K"), registerMember("L"),
+               # registerMember("M"), registerMember("N"),
+               # registerMember("O"), registerMember("P"),
+               # registerMember("Q"), registerMember("R"),
+               # registerMember("A"), registerMember("B"),
+               # registerMember("C"), registerMember("D"),
+               # registerMember("E"), registerMember("F"),
+               # registerMember("G"), registerMember("H"),
+               # registerMember("I"), registerMember("J"),
+               # registerMember("K"), registerMember("L"),
+               # registerMember("M"), registerMember("N"),
+               # registerMember("O"), registerMember("P"),
+               # registerMember("Q"), registerMember("R"),
+               # registerMember("A"), registerMember("B"),
+               # registerMember("C"), registerMember("D"),
+               # registerMember("E"), registerMember("F"),
+               # registerMember("G"), registerMember("H"),
+               # registerMember("I"), registerMember("J"),
+               # registerMember("K"), registerMember("L"),
+               # registerMember("M"), registerMember("N"),
+               # registerMember("O"), registerMember("P"),
+               # registerMember("Q"), registerMember("R"),
+               # registerMember("A"), registerMember("B"),
+               # registerMember("C"), registerMember("D"),
+               # registerMember("E"), registerMember("F"),
+               # registerMember("G"), registerMember("H"),
+               # registerMember("I"), registerMember("J"),
+               # registerMember("K"), registerMember("L"),
+               # registerMember("M"), registerMember("N"),
+               # registerMember("O"), registerMember("P"),
+               # registerMember("Q"), registerMember("R"),
+               # registerMember("A"), registerMember("B"),
+               # registerMember("C"), registerMember("D"),
+               # registerMember("E"), registerMember("F"),
+               # registerMember("G"), registerMember("H"),
+               # registerMember("I"), registerMember("J"),
+               # registerMember("K"), registerMember("L"),
+               # registerMember("M"), registerMember("N"),
+               # registerMember("O"), registerMember("P"),
+               # registerMember("Q"), registerMember("R"),
+               # registerMember("A"), registerMember("B"),
+               # registerMember("C"), registerMember("D"),
+               # registerMember("E"), registerMember("F"),
+               # registerMember("G"), registerMember("H"),
+               # registerMember("I"), registerMember("J"),
+               # registerMember("K"), registerMember("L"),
+               # registerMember("M"), registerMember("N"),
+               # registerMember("O"), registerMember("P"),
+               # registerMember("Q"), registerMember("R"),
+               # registerMember("A"), registerMember("B"),
+               # registerMember("C"), registerMember("D"),
+               # registerMember("E"), registerMember("F"),
+               # registerMember("G"), registerMember("H"),
+               # registerMember("I"), registerMember("J"),
+               # registerMember("K"), registerMember("L"),
+               # registerMember("M"), registerMember("N"),
+               # registerMember("O"), registerMember("P"),
+               # registerMember("Q"), registerMember("R")]
     db = connect()
     c = db.cursor()
     x = countMembers()
@@ -225,7 +226,7 @@ def runTestCase(is_new=False):
     most even matches for last.
     """
     if is_new == True:
-        createTestCase()
+        createTestSet()
         tourney = 1
     else:
         truncatePlayers()
@@ -238,19 +239,17 @@ def runTestCase(is_new=False):
         tourney = (c.fetchone())[0] + 1
         db.commit()
         db.close()
+
     #Start fake tourney here.
 
     seedings = membersBySeeding()
     players = [row[0] for row in seedings]
     for i in players:
         registerPlayer(i)
-    #standings = playerStandings(tourney)
 
-    # TEMPLATE FOR FIRST ROUND PAIRINGS
-    #players_list = [row[0] for row in standings]
-    numOfPlayers = len(playerStandings(tourney))
+    num_of_players = countPlayers()
     count = 0
-    rounds = int(math.ceil(math.log(numOfPlayers, 2)))
+    rounds = int(math.ceil(math.log(num_of_players, 2)))
     for i in range(rounds):
         count += 1
         print("round " + str(count))
@@ -262,7 +261,6 @@ def runTestCase(is_new=False):
                 reportMatch(tourney, current_round, x[0], x[1])
             elif x[1] < x[0]:
                 reportMatch(tourney, current_round, x[1], x[0])
-
     print("final scores")
     print(playerStandings(tourney))
     print("They rank :")
@@ -273,7 +271,6 @@ def runTestCase(is_new=False):
         print(str(rank) + ". " + i[1] + " --ID: " + str(i[0]))
         rank += 1
     endTournament()
-
 
 
 def playerRanks(t_id):
@@ -302,10 +299,23 @@ def playerRanks(t_id):
     db.close()
     return ranks
 
+
+def querySpeedTest(t_id):
+    db = connect()
+    c = db.cursor()
+    c.execute("select tourney_id "
+              "from matches WHERE tourney_id = %s "
+              "LIMIT 1", (t_id,))
+    in_progress = c.fetchone()
+    db.commit()
+    db.close()
+    return in_progress
+
+
 if __name__ == '__main__':
     runTestCase(True)
-
-    endTournament()
+    # for i in range(10000):
+    #     result = querySpeedTest(1)
     #line_up = swissPairings(1)
     #print(line_up)
     print "Success!  All tests pass!"
