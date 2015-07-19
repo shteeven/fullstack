@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a756eb5b-39c4-4bd8-9222-e20e5271d6cd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tournament/old/random" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tournament/old/waste.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tournament/tournamentdb.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/action_provision" afterPath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/action_provision" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/action_set_name" afterPath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/action_set_name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/id" afterPath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/index_uuid" afterPath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/index_uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/private_key" afterPath="$PROJECT_DIR$/.vagrant/machines/default/virtualbox/private_key" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/test.py" afterPath="$PROJECT_DIR$/tournament/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournament.py" afterPath="$PROJECT_DIR$/tournament/tournament.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournament.sql" afterPath="$PROJECT_DIR$/tournament/tournament.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -58,10 +48,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tournament.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tournament.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8562368">
+            <state vertical-scroll-proportion="0.0">
               <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
               <folding>
                 <element signature="e#291#449#0" expanded="false" />
@@ -142,6 +132,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="tournament.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tournament/tournament.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30405405">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -173,8 +173,8 @@
         <option value="$PROJECT_DIR$/tournament/newtournamentdb.py" />
         <option value="$PROJECT_DIR$/tournament/tournamentdb.py" />
         <option value="$PROJECT_DIR$/tournament/test.py" />
-        <option value="$PROJECT_DIR$/tournament/tournament.sql" />
         <option value="$PROJECT_DIR$/tournament/tournament.py" />
+        <option value="$PROJECT_DIR$/tournament/tournament.sql" />
       </list>
     </option>
   </component>
@@ -1069,14 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tournament/tournament.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0344827">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pg_config.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5555556">
@@ -1146,7 +1138,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8562368">
+        <state vertical-scroll-proportion="0.0">
           <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
           <folding>
             <element signature="e#291#449#0" expanded="false" />
@@ -1223,6 +1215,14 @@
             <marker date="1437303936000" expanded="true" signature="15474:15799" placeholder="SELECT p.id,..players..." />
             <marker date="1437303936000" expanded="true" signature="15649:15751" placeholder="SELECT oppon..matches..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30405405">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

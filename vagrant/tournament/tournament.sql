@@ -3,6 +3,7 @@
 -- DROP DATABASE tournament;
 
 CREATE DATABASE tournament;
+\c tournament;
 
 -- Table: matches
 
