@@ -2,7 +2,7 @@
 #
 # Test cases for tournament.py
 
-from tournamentdb import *
+from tournament import *
 import sys
 import math
 
@@ -137,33 +137,33 @@ def createTestSet():
                registerMember("C"), registerMember("D"),
                registerMember("E"), registerMember("F"),
                registerMember("G"), registerMember("H"),
-               registerMember("I")]  # registerMember("J"),]
-               # registerMember("K"), registerMember("L"),
-               # registerMember("M"), registerMember("N"),
-               # registerMember("O"), registerMember("P"),
-               # registerMember("Q"), registerMember("R"),
-               # registerMember("A"), registerMember("B"),
-               # registerMember("C"), registerMember("D"),
-               # registerMember("E"), registerMember("F"),
-               # registerMember("G"), registerMember("H"),
-               # registerMember("I"), registerMember("J"),
-               # registerMember("K"), registerMember("L"),
-               # registerMember("M"), registerMember("N"),
-               # registerMember("O"), registerMember("P"),
-               # registerMember("Q"), registerMember("R"),
-               # registerMember("A"), registerMember("B"),
-               # registerMember("C"), registerMember("D"),
-               # registerMember("E"), registerMember("F"),
-               # registerMember("G"), registerMember("H"),
-               # registerMember("I"), registerMember("J"),
-               # registerMember("K"), registerMember("L"),
-               # registerMember("M"), registerMember("N"),
-               # registerMember("O"), registerMember("P"),
-               # registerMember("Q"), registerMember("R"),
-               # registerMember("A"), registerMember("B"),
-               # registerMember("C"), registerMember("D"),
-               # registerMember("E"), registerMember("F"),
-               # registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),
+               registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),
+               registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),
+               registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),]
                # registerMember("I"), registerMember("J"),
                # registerMember("K"), registerMember("L"),
                # registerMember("M"), registerMember("N"),
@@ -273,33 +273,6 @@ def runTestCase(is_new=False):
     endTournament()
 
 
-def playerRanks(t_id):
-    db = connect()
-    c = db.cursor()
-    #c.execute("DROP VIEW omw")
-    c.execute("CREATE OR REPLACE VIEW omw "
-              "AS SELECT m.player_id, "
-              "SUM(m.match_outcome) AS match_points "
-              "FROM matches m, players p "
-              "WHERE m.player_id = p.id AND tourney_id = %s "
-              "GROUP BY m.player_id, p.name "
-              "ORDER BY match_points DESC ", (t_id,))
-    c.execute("SELECT o.player_id, p.name, o.match_points, "
-              "(SELECT SUM(o.match_points) FROM omw o "
-              "LEFT JOIN matches m "
-              "ON o.player_id=m.player_id "
-              "WHERE m.opponent_id = p.id AND m.tourney_id = %s) AS omw_score "
-              "FROM players p "
-              "LEFT JOIN omw o "
-              "ON p.id=o.player_id "
-              "ORDER BY o.match_points DESC, omw_score DESC, p.seed_score DESC",
-              (t_id,))
-    ranks = c.fetchall()
-    db.commit()
-    db.close()
-    return ranks
-
-
 def querySpeedTest(t_id):
     db = connect()
     c = db.cursor()
@@ -314,8 +287,4 @@ def querySpeedTest(t_id):
 
 if __name__ == '__main__':
     runTestCase(True)
-    # for i in range(10000):
-    #     result = querySpeedTest(1)
-    #line_up = swissPairings(1)
-    #print(line_up)
     print "Success!  All tests pass!"

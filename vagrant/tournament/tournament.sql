@@ -2,16 +2,16 @@
 
 -- DROP DATABASE tournament;
 
--- CREATE DATABASE tournament;
+CREATE DATABASE tournament;
 
 -- Table: matches
 
--- DROP TABLE matches;
+DROP TABLE matches;
 
 CREATE TABLE matches
 (
   match_id integer NOT NULL,
-  match_outcome integer NOT NULL DEFAULT 0,
+  match_outcome real DEFAULT 0,
   player_id integer NOT NULL,
   opponent_id integer NOT NULL,
   tourney_id integer NOT NULL,
@@ -23,7 +23,7 @@ WITH (
 
 -- Table: members
 
--- DROP TABLE members;
+DROP TABLE members;
 
 CREATE TABLE members
 (
@@ -39,7 +39,7 @@ WITH (
 
 -- Table: players
 
--- DROP TABLE players;
+DROP TABLE players;
 
 CREATE TABLE players
 (
