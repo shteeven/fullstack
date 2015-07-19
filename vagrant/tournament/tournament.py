@@ -416,6 +416,7 @@ def swissPairings(t_id):
     db.close()
     num_of_players = countPlayers()
     if in_progress == None:
+        # initial pairings
         if num_of_players % 2 != 0:
             db = connect()
             c = db.cursor()
@@ -424,61 +425,20 @@ def swissPairings(t_id):
             db.commit()
             db.close()
         num_of_players = countPlayers()
-        pairs_list = initialPairing(num_of_players, t_id)
+        players = [row[0] for row in playerStandings(t_id)]
+        pairs_list = []
+        for i in range(num_of_players / 2):
+            pairs_list.append((players[i], players[i + num_of_players / 2], 0))
     else:
-        pairs_list = subsequentPairings(num_of_players, t_id)
+        # subsequent pairing
+        players = [row[0] for row in playerStandings(t_id)]
+        pairs_list = recursivePairFinder(t_id, players, num_of_players)
     if len(pairs_list) == (num_of_players / 2):
         return pairs_list
     else:
         raise ValueError("swissPairings is not returning the expected number "
                          "of pairs. This is most likely due to the number of"
                          "rounds for this style of tournament being exceeded.")
-
-
-def initialPairing(num_of_players, t_id):
-    """This is the initial pairing function. It pairs players based on seeding,
-    allowing players to be better placed in the pool for situations where a tie
-    may arise, as well as avoid high-performing, evenly-matched players from
-    being matched in the first round.
-    Returns a list of pairs of players for the initial round of a tourney.
-
-    Args:
-      t_id: the tournament id.
-
-    Returns:
-      A list of tuples, each of which contains (id1, id2, diff)
-        id1: the first player's unique id
-        id2: the second player's unique id
-        diff: the absolute difference in players' match points
-    """
-    pair_count = num_of_players / 2
-    players_list = [row[0] for row in playerStandings(t_id)]
-    pairs = []
-    for i in range(pair_count):
-        pairs.append((players_list[i], players_list[i + pair_count], 0))
-    return pairs
-
-
-def subsequentPairings(num_of_players, t_id):
-    """This is a function that follows the initial pairing function. If there
-    are no records for this tourney in the matches table, it will fail to run.
-    Returns a list of pairs of players for the next round of a tourney. Relies
-    on recursivePairFinder() to find the best pairing combination.
-
-    Args:
-      t_id: the tournament id.
-
-    Returns:
-      A list of tuples, each of which contains (id1, id2, diff)
-        id1: the first player's unique id
-        id2: the second player's unique id
-        diff: the absolute difference in players' match points
-    """
-    players = playerStandings(t_id)
-    players_by_points = [i[0] for i in players]
-    pairs_list = recursivePairFinder(
-        t_id, players_by_points, num_of_players)
-    return pairs_list
 
 
 def remainingOpponents(t_id, p_id):
