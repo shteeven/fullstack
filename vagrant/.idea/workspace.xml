@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a756eb5b-39c4-4bd8-9222-e20e5271d6cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tournament/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/README.txt" afterPath="$PROJECT_DIR$/tournament/README.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/test.py" afterPath="$PROJECT_DIR$/tournament/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournament.py" afterPath="$PROJECT_DIR$/tournament/tournament.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -21,10 +21,10 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/vagrant$tournament.coverage" NAME="tournament Coverage Results" MODIFIED="1436591891518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$swiss.coverage" NAME="swiss Coverage Results" MODIFIED="1435825894249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/vagrant$test.coverage" NAME="test Coverage Results" MODIFIED="1437317092665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
+    <SUITE FILE_PATH="coverage/vagrant$test.coverage" NAME="test Coverage Results" MODIFIED="1437366523928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$stable_match.coverage" NAME="stable_match Coverage Results" MODIFIED="1435216425798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
-    <SUITE FILE_PATH="coverage/vagrant$swisspairing.coverage" NAME="swisspairing Coverage Results" MODIFIED="1436935988387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$forum.coverage" NAME="forum Coverage Results" MODIFIED="1434375677523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/forum" />
+    <SUITE FILE_PATH="coverage/vagrant$swisspairing.coverage" NAME="swisspairing Coverage Results" MODIFIED="1436935988387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$tournament_test.coverage" NAME="tournament_test Coverage Results" MODIFIED="1436943707206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$tournamentdb.coverage" NAME="tournamentdb Coverage Results" MODIFIED="1436962873662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
     <SUITE FILE_PATH="coverage/vagrant$experiment.coverage" NAME="experiment Coverage Results" MODIFIED="1436773568312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tournament" />
@@ -49,133 +49,7 @@
     <favorites_list name="vagrant" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="tournament.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
-              <folding>
-                <element signature="e#291#449#0" expanded="false" />
-                <element signature="e#479#642#0" expanded="false" />
-                <element signature="e#672#829#0" expanded="false" />
-                <element signature="e#855#990#0" expanded="false" />
-                <element signature="e#1021#1236#0" expanded="false" />
-                <element signature="e#1021#1106#1" expanded="false" />
-                <element signature="e#1267#1375#1" expanded="false" />
-                <element signature="e#1543#1860#0" expanded="false" />
-                <element signature="e#1543#1681#1" expanded="false" />
-                <element signature="e#1892#2150#0" expanded="false" />
-                <element signature="e#1892#1995#1" expanded="false" />
-                <element signature="e#2177#2397#0" expanded="false" />
-                <element signature="e#2424#2651#0" expanded="false" />
-                <element signature="e#2684#3125#0" expanded="false" />
-                <element signature="e#2684#2856#1" expanded="false" />
-                <element signature="e#3158#3575#0" expanded="false" />
-                <element signature="e#3158#3286#1" expanded="false" />
-                <element signature="e#3606#4430#0" expanded="false" />
-                <element signature="e#3606#4125#1" expanded="false" />
-                <element signature="e#4458#5172#0" expanded="false" />
-                <element signature="e#4458#4942#1" expanded="false" />
-                <element signature="e#5201#5902#0" expanded="false" />
-                <element signature="e#5201#5675#1" expanded="false" />
-                <element signature="e#5930#6646#0" expanded="false" />
-                <element signature="e#5930#6416#1" expanded="false" />
-                <element signature="e#6680#7374#0" expanded="false" />
-                <element signature="e#6680#7092#1" expanded="false" />
-                <element signature="e#7404#8363#0" expanded="false" />
-                <element signature="e#7404#7854#1" expanded="false" />
-                <element signature="e#8428#10845#0" expanded="false" />
-                <element signature="e#8428#8778#1" expanded="false" />
-                <element signature="e#10873#11370#0" expanded="false" />
-                <element signature="e#10873#11030#1" expanded="false" />
-                <element signature="e#11402#13483#0" expanded="false" />
-                <element signature="e#11402#12186#1" expanded="false" />
-                <element signature="e#13526#14456#0" expanded="false" />
-                <element signature="e#13526#13971#1" expanded="false" />
-                <element signature="e#14509#16599#0" expanded="false" />
-                <element signature="e#14509#15341#1" expanded="false" />
-                <marker date="1437318472000" expanded="true" signature="1161:1192" placeholder="DELETE FROM ..." />
-                <marker date="1437318472000" expanded="true" signature="1430:1461" placeholder="DELETE FROM ..." />
-                <marker date="1437318472000" expanded="true" signature="1736:1810" placeholder="DELETE FROM ..." />
-                <marker date="1437318472000" expanded="true" signature="2050:2106" placeholder="DELETE FROM ..." />
-                <marker date="1437318472000" expanded="true" signature="2289:2317" placeholder="SELECT count..members..." />
-                <marker date="1437318472000" expanded="true" signature="2543:2571" placeholder="SELECT count..players..." />
-                <marker date="1437318472000" expanded="true" signature="2911:2968" placeholder="INSERT INTO ..." />
-                <marker date="1437318472000" expanded="true" signature="2995:3031" placeholder="SELECT id FR..members..." />
-                <marker date="1437318472000" expanded="true" signature="3341:3531" placeholder="INSERT INTO ..." />
-                <marker date="1437318472000" expanded="true" signature="3401:3531" placeholder="SELECT id, n..members..." />
-                <marker date="1437318472000" expanded="true" signature="4180:4351" placeholder="SELECT id, n..members..." />
-                <marker date="1437318472000" expanded="true" signature="4997:5093" placeholder="SELECT id, n..members..." />
-                <marker date="1437318472000" expanded="true" signature="5730:5823" placeholder="SELECT id, s..players..." />
-                <marker date="1437318472000" expanded="true" signature="6471:6567" placeholder="SELECT id, n..players..." />
-                <marker date="1437318472000" expanded="true" signature="7147:7286" placeholder="SELECT p.id,..players..." />
-                <marker date="1437318472000" expanded="true" signature="7909:8265" placeholder="SELECT p.id,..players..." />
-                <marker date="1437318472000" expanded="true" signature="7956:8127" placeholder="SELECT SUM(o..players..." />
-                <marker date="1437318472000" expanded="true" signature="8928:9044" placeholder="UPDATE playe..." />
-                <marker date="1437318472000" expanded="true" signature="9114:9230" placeholder="UPDATE playe..." />
-                <marker date="1437318472000" expanded="true" signature="9305:9456" placeholder="INSERT INTO ..." />
-                <marker date="1437318472000" expanded="true" signature="9570:9720" placeholder="INSERT INTO ..." />
-                <marker date="1437318472000" expanded="true" signature="9915:10011" placeholder="UPDATE playe..." />
-                <marker date="1437318472000" expanded="true" signature="10080:10195" placeholder="UPDATE playe..." />
-                <marker date="1437318472000" expanded="true" signature="10268:10419" placeholder="INSERT INTO ..." />
-                <marker date="1437318472000" expanded="true" signature="10531:10682" placeholder="INSERT INTO ..." />
-                <marker date="1437318472000" expanded="true" signature="11085:11245" placeholder="UPDATE membe..." />
-                <marker date="1437318472000" expanded="true" signature="12241:12316" placeholder="SELECT * FRO..matches..." />
-                <marker date="1437318472000" expanded="true" signature="12597:12694" placeholder="INSERT INTO ..." />
-                <marker date="1437318472000" expanded="true" signature="14026:14351" placeholder="SELECT p.id,..players..." />
-                <marker date="1437318472000" expanded="true" signature="14201:14303" placeholder="SELECT oppon..matches..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tournament.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tournament/tournament.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6551723">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tournament/README.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.031712472">
-              <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tournament/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="216" column="15" selection-start-line="216" selection-start-column="15" selection-end-line="216" selection-end-column="15" />
-              <folding>
-                <element signature="e#56#80#0" expanded="true" />
-                <element signature="e#136#490#0" expanded="false" />
-                <element signature="e#522#878#0" expanded="false" />
-                <element signature="e#907#1248#0" expanded="false" />
-                <element signature="e#1280#1666#0" expanded="false" />
-                <element signature="e#1713#2824#0" expanded="false" />
-                <element signature="e#2854#4610#0" expanded="false" />
-                <element signature="e#2854#2955#1" expanded="false" />
-                <element signature="e#4638#4905#1" expanded="false" />
-                <element signature="e#9478#9745#1" expanded="false" />
-                <element signature="e#11102#11342#0" expanded="false" />
-                <marker date="1437311362000" expanded="true" signature="9296:9392" placeholder="UPDATE membe..." />
-                <marker date="1437311362000" expanded="true" signature="9915:10053" placeholder="SELECT tourn..matches..." />
-                <marker date="1437311362000" expanded="true" signature="11152:11246" placeholder="select tourn..matches..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -206,6 +80,7 @@
         <option value="$PROJECT_DIR$/tournament/newtournamentdb.py" />
         <option value="$PROJECT_DIR$/tournament/tournamentdb.py" />
         <option value="$PROJECT_DIR$/tournament/tournament.sql" />
+        <option value="$PROJECT_DIR$/tournament/.gitignore" />
         <option value="$PROJECT_DIR$/tournament/test.py" />
         <option value="$PROJECT_DIR$/tournament/tournament.py" />
         <option value="$PROJECT_DIR$/tournament/README.txt" />
@@ -265,6 +140,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -314,7 +190,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -646,7 +521,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -657,19 +532,19 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18497577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18739903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31369862" sideWeight="0.49030694" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31232876" sideWeight="0.49030694" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -688,12 +563,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18497577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31506848" sideWeight="0.49030694" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329235" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31506848" sideWeight="0.49030694" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -714,11 +589,104 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+          <folding>
+            <element signature="e#449#607#0" expanded="false" />
+            <element signature="e#637#800#0" expanded="false" />
+            <element signature="e#1235#1450#0" expanded="false" />
+            <element signature="e#1235#1320#1" expanded="false" />
+            <element signature="e#1481#1719#0" expanded="false" />
+            <element signature="e#1481#1589#1" expanded="false" />
+            <element signature="e#1757#2074#0" expanded="false" />
+            <element signature="e#1757#1895#1" expanded="false" />
+            <element signature="e#2106#2364#0" expanded="false" />
+            <element signature="e#2106#2209#1" expanded="false" />
+            <element signature="e#2391#2611#0" expanded="false" />
+            <element signature="e#2638#2865#0" expanded="false" />
+            <element signature="e#2898#3339#0" expanded="false" />
+            <element signature="e#2898#3070#1" expanded="false" />
+            <element signature="e#3372#3789#0" expanded="false" />
+            <element signature="e#3372#3500#1" expanded="false" />
+            <element signature="e#3820#4644#0" expanded="false" />
+            <element signature="e#3820#4339#1" expanded="false" />
+            <element signature="e#4672#5386#0" expanded="false" />
+            <element signature="e#4672#5156#1" expanded="false" />
+            <element signature="e#5415#6116#0" expanded="false" />
+            <element signature="e#5415#5889#1" expanded="false" />
+            <element signature="e#6144#6860#0" expanded="false" />
+            <element signature="e#6144#6630#1" expanded="false" />
+            <element signature="e#6894#7306#1" expanded="false" />
+            <element signature="e#7618#8577#0" expanded="false" />
+            <element signature="e#7618#8068#1" expanded="false" />
+            <element signature="e#8642#11059#0" expanded="false" />
+            <element signature="e#8642#8992#1" expanded="false" />
+            <element signature="e#11087#11584#0" expanded="false" />
+            <element signature="e#11087#11244#1" expanded="false" />
+            <element signature="e#11616#13697#0" expanded="false" />
+            <element signature="e#11616#12400#1" expanded="false" />
+            <element signature="e#13740#14185#1" expanded="false" />
+            <element signature="e#14723#15555#1" expanded="false" />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT count..members..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT count..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id FR..members..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..members..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..members..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..members..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id, s..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT p.id,..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT p.id,..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT p.id,..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT SUM(o..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="UPDATE membe..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..matches..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT p.id,..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT oppon..matches..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="293" column="17" selection-start-line="293" selection-start-column="17" selection-end-line="293" selection-end-column="17" />
+          <folding>
+            <element signature="e#56#80#0" expanded="true" />
+            <element signature="e#504#860#0" expanded="false" />
+            <element signature="e#1663#2377#0" expanded="false" />
+            <element signature="e#2407#2508#1" expanded="false" />
+            <element signature="e#4122#4389#1" expanded="false" />
+            <element signature="e#13316#13583#1" expanded="false" />
+            <element signature="e#14915#15155#0" expanded="false" />
+            <marker date="1437367202000" expanded="true" signature="-1:-1" placeholder="UPDATE membe..." />
+            <marker date="1437367202000" expanded="true" signature="-1:-1" placeholder="SELECT tourn..matches..." />
+            <marker date="1437367202000" expanded="true" signature="-1:-1" placeholder="select tourn..matches..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tournament/tournament.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1100,7 +1066,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5555556">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,7 +1073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1116,7 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,7 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5517242">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1132,34 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.031712472">
           <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <marker date="1437104293000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..posts..." />
-            <marker date="1437104293000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1437104293000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tournament/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="216" column="15" selection-start-line="216" selection-start-column="15" selection-end-line="216" selection-end-column="15" />
-          <folding>
-            <element signature="e#56#80#0" expanded="true" />
-            <element signature="e#136#490#0" expanded="false" />
-            <element signature="e#522#878#0" expanded="false" />
-            <element signature="e#907#1248#0" expanded="false" />
-            <element signature="e#1280#1666#0" expanded="false" />
-            <element signature="e#1713#2824#0" expanded="false" />
-            <element signature="e#2854#4610#0" expanded="false" />
-            <element signature="e#2854#2955#1" expanded="false" />
-            <element signature="e#4638#4905#1" expanded="false" />
-            <element signature="e#9478#9745#1" expanded="false" />
-            <element signature="e#11102#11342#0" expanded="false" />
-            <marker date="1437311362000" expanded="true" signature="9296:9392" placeholder="UPDATE membe..." />
-            <marker date="1437311362000" expanded="true" signature="9915:10053" placeholder="SELECT tourn..matches..." />
-            <marker date="1437311362000" expanded="true" signature="11152:11246" placeholder="select tourn..matches..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1167,7 +1101,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="65" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,101 +1108,123 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tournament/tournament.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6551723">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.02027027">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="38" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+    <entry file="file://$PROJECT_DIR$/tournament/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
-          <folding>
-            <element signature="e#291#449#0" expanded="false" />
-            <element signature="e#479#642#0" expanded="false" />
-            <element signature="e#672#829#0" expanded="false" />
-            <element signature="e#855#990#0" expanded="false" />
-            <element signature="e#1021#1236#0" expanded="false" />
-            <element signature="e#1021#1106#1" expanded="false" />
-            <element signature="e#1267#1375#1" expanded="false" />
-            <element signature="e#1543#1860#0" expanded="false" />
-            <element signature="e#1543#1681#1" expanded="false" />
-            <element signature="e#1892#2150#0" expanded="false" />
-            <element signature="e#1892#1995#1" expanded="false" />
-            <element signature="e#2177#2397#0" expanded="false" />
-            <element signature="e#2424#2651#0" expanded="false" />
-            <element signature="e#2684#3125#0" expanded="false" />
-            <element signature="e#2684#2856#1" expanded="false" />
-            <element signature="e#3158#3575#0" expanded="false" />
-            <element signature="e#3158#3286#1" expanded="false" />
-            <element signature="e#3606#4430#0" expanded="false" />
-            <element signature="e#3606#4125#1" expanded="false" />
-            <element signature="e#4458#5172#0" expanded="false" />
-            <element signature="e#4458#4942#1" expanded="false" />
-            <element signature="e#5201#5902#0" expanded="false" />
-            <element signature="e#5201#5675#1" expanded="false" />
-            <element signature="e#5930#6646#0" expanded="false" />
-            <element signature="e#5930#6416#1" expanded="false" />
-            <element signature="e#6680#7374#0" expanded="false" />
-            <element signature="e#6680#7092#1" expanded="false" />
-            <element signature="e#7404#8363#0" expanded="false" />
-            <element signature="e#7404#7854#1" expanded="false" />
-            <element signature="e#8428#10845#0" expanded="false" />
-            <element signature="e#8428#8778#1" expanded="false" />
-            <element signature="e#10873#11370#0" expanded="false" />
-            <element signature="e#10873#11030#1" expanded="false" />
-            <element signature="e#11402#13483#0" expanded="false" />
-            <element signature="e#11402#12186#1" expanded="false" />
-            <element signature="e#13526#14456#0" expanded="false" />
-            <element signature="e#13526#13971#1" expanded="false" />
-            <element signature="e#14509#16599#0" expanded="false" />
-            <element signature="e#14509#15341#1" expanded="false" />
-            <marker date="1437318472000" expanded="true" signature="1161:1192" placeholder="DELETE FROM ..." />
-            <marker date="1437318472000" expanded="true" signature="1430:1461" placeholder="DELETE FROM ..." />
-            <marker date="1437318472000" expanded="true" signature="1736:1810" placeholder="DELETE FROM ..." />
-            <marker date="1437318472000" expanded="true" signature="2050:2106" placeholder="DELETE FROM ..." />
-            <marker date="1437318472000" expanded="true" signature="2289:2317" placeholder="SELECT count..members..." />
-            <marker date="1437318472000" expanded="true" signature="2543:2571" placeholder="SELECT count..players..." />
-            <marker date="1437318472000" expanded="true" signature="2911:2968" placeholder="INSERT INTO ..." />
-            <marker date="1437318472000" expanded="true" signature="2995:3031" placeholder="SELECT id FR..members..." />
-            <marker date="1437318472000" expanded="true" signature="3341:3531" placeholder="INSERT INTO ..." />
-            <marker date="1437318472000" expanded="true" signature="3401:3531" placeholder="SELECT id, n..members..." />
-            <marker date="1437318472000" expanded="true" signature="4180:4351" placeholder="SELECT id, n..members..." />
-            <marker date="1437318472000" expanded="true" signature="4997:5093" placeholder="SELECT id, n..members..." />
-            <marker date="1437318472000" expanded="true" signature="5730:5823" placeholder="SELECT id, s..players..." />
-            <marker date="1437318472000" expanded="true" signature="6471:6567" placeholder="SELECT id, n..players..." />
-            <marker date="1437318472000" expanded="true" signature="7147:7286" placeholder="SELECT p.id,..players..." />
-            <marker date="1437318472000" expanded="true" signature="7909:8265" placeholder="SELECT p.id,..players..." />
-            <marker date="1437318472000" expanded="true" signature="7956:8127" placeholder="SELECT SUM(o..players..." />
-            <marker date="1437318472000" expanded="true" signature="8928:9044" placeholder="UPDATE playe..." />
-            <marker date="1437318472000" expanded="true" signature="9114:9230" placeholder="UPDATE playe..." />
-            <marker date="1437318472000" expanded="true" signature="9305:9456" placeholder="INSERT INTO ..." />
-            <marker date="1437318472000" expanded="true" signature="9570:9720" placeholder="INSERT INTO ..." />
-            <marker date="1437318472000" expanded="true" signature="9915:10011" placeholder="UPDATE playe..." />
-            <marker date="1437318472000" expanded="true" signature="10080:10195" placeholder="UPDATE playe..." />
-            <marker date="1437318472000" expanded="true" signature="10268:10419" placeholder="INSERT INTO ..." />
-            <marker date="1437318472000" expanded="true" signature="10531:10682" placeholder="INSERT INTO ..." />
-            <marker date="1437318472000" expanded="true" signature="11085:11245" placeholder="UPDATE membe..." />
-            <marker date="1437318472000" expanded="true" signature="12241:12316" placeholder="SELECT * FRO..matches..." />
-            <marker date="1437318472000" expanded="true" signature="12597:12694" placeholder="INSERT INTO ..." />
-            <marker date="1437318472000" expanded="true" signature="14026:14351" placeholder="SELECT p.id,..players..." />
-            <marker date="1437318472000" expanded="true" signature="14201:14303" placeholder="SELECT oppon..matches..." />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tournament/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.031712472">
-          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.5063291">
+          <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47468355">
+          <caret line="144" column="57" selection-start-line="144" selection-start-column="57" selection-end-line="144" selection-end-column="57" />
+          <folding>
+            <element signature="e#56#80#0" expanded="true" />
+            <element signature="e#504#860#0" expanded="false" />
+            <element signature="e#1663#2377#0" expanded="false" />
+            <element signature="e#2407#2508#1" expanded="false" />
+            <element signature="e#4122#4389#1" expanded="false" />
+            <element signature="e#13316#13583#1" expanded="false" />
+            <element signature="e#14915#15155#0" expanded="false" />
+            <marker date="1437367202000" expanded="true" signature="-1:-1" placeholder="UPDATE membe..." />
+            <marker date="1437367202000" expanded="true" signature="-1:-1" placeholder="SELECT tourn..matches..." />
+            <marker date="1437367202000" expanded="true" signature="-1:-1" placeholder="select tourn..matches..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tournament/tournament.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4113924">
+          <caret line="469" column="42" selection-start-line="469" selection-start-column="42" selection-end-line="469" selection-end-column="42" />
+          <folding>
+            <element signature="e#449#607#0" expanded="false" />
+            <element signature="e#637#800#0" expanded="false" />
+            <element signature="e#1235#1450#0" expanded="false" />
+            <element signature="e#1235#1320#1" expanded="false" />
+            <element signature="e#1481#1719#0" expanded="false" />
+            <element signature="e#1481#1589#1" expanded="false" />
+            <element signature="e#1757#2074#0" expanded="false" />
+            <element signature="e#1757#1895#1" expanded="false" />
+            <element signature="e#2106#2364#0" expanded="false" />
+            <element signature="e#2106#2209#1" expanded="false" />
+            <element signature="e#2391#2611#0" expanded="false" />
+            <element signature="e#2638#2865#0" expanded="false" />
+            <element signature="e#2898#3339#0" expanded="false" />
+            <element signature="e#2898#3070#1" expanded="false" />
+            <element signature="e#3372#3789#0" expanded="false" />
+            <element signature="e#3372#3500#1" expanded="false" />
+            <element signature="e#3820#4644#0" expanded="false" />
+            <element signature="e#3820#4339#1" expanded="false" />
+            <element signature="e#4672#5386#0" expanded="false" />
+            <element signature="e#4672#5156#1" expanded="false" />
+            <element signature="e#5415#6116#0" expanded="false" />
+            <element signature="e#5415#5889#1" expanded="false" />
+            <element signature="e#6144#6860#0" expanded="false" />
+            <element signature="e#6144#6630#1" expanded="false" />
+            <element signature="e#6894#7306#1" expanded="false" />
+            <element signature="e#7618#8577#0" expanded="false" />
+            <element signature="e#7618#8068#1" expanded="false" />
+            <element signature="e#8642#11059#0" expanded="false" />
+            <element signature="e#8642#8992#1" expanded="false" />
+            <element signature="e#11087#11584#0" expanded="false" />
+            <element signature="e#11087#11244#1" expanded="false" />
+            <element signature="e#11616#13697#0" expanded="false" />
+            <element signature="e#11616#12400#1" expanded="false" />
+            <element signature="e#13740#14185#1" expanded="false" />
+            <element signature="e#14723#15555#1" expanded="false" />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT count..members..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT count..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id FR..members..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..members..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..members..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..members..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id, s..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT id, n..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT p.id,..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT p.id,..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT p.id,..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT SUM(o..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="UPDATE playe..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="UPDATE membe..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..matches..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT p.id,..players..." />
+            <marker date="1437367318000" expanded="true" signature="-1:-1" placeholder="SELECT oppon..matches..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -10,7 +10,6 @@ import math
 def testRegisterMember():
     member_count = countMembers()
     new_id = registerMember('steven')
-    print(new_id)
     if member_count == countMembers():
         raise ValueError("Member count should be plus one of previous count")
     elif countMembers() == member_count + 1:
@@ -40,14 +39,13 @@ def testAddPlayers():
     elif countPlayers() == player_count + 1:
         func_name = sys._getframe().f_code.co_name
         print(func_name + " passed!")
+    return new_id
 
 
 def testDeletePlayers():
     new_id = testAddPlayers()
     player_count = countPlayers()
-    print(player_count)
     deletePlayer(new_id)
-    print(countPlayers())
     if countPlayers() == player_count:
         raise ValueError("Player count should be minus one of previous count")
     elif countPlayers() == player_count - 1:
@@ -60,21 +58,16 @@ def testMemberStandingsBeforeMatches():
     new_id2 = registerMember("Randy Schwartz")
     registerPlayer(new_id1)
     registerPlayer(new_id2)
-    standings = membersByWins()
+    standings = playerStandings(1)
     if len(standings) < 2:
         raise ValueError("Players should appear in playerStandings even before "
                          "they have played any matches.")
     elif len(standings) > 2:
         raise ValueError("Only registered players should appear in standings.")
-    if len(standings[0]) != 4:
-        raise ValueError("Each playerStandings row should have four columns.")
-    [(id1, name1, wins1, matches1), (id2, name2, wins2, matches2)] = standings
-    if matches1 != 0 or matches2 != 0 or wins1 != 0 or wins2 != 0:
+    [(id1, wins1), (id2, wins2)] = standings
+    if wins1 != 0 or wins2 != 0:
         raise ValueError(
             "Newly registered players should have no matches or wins.")
-    if set([name1, name2]) != set(["Melpomene Murray", "Randy Schwartz"]):
-        raise ValueError("Registered players' names should appear in standings, "
-                         "even if they have no matches played.")
     func_name = sys._getframe().f_code.co_name
     print(func_name + " passed!")
 
@@ -89,17 +82,18 @@ def testReportMatch():
     registerPlayer(new_id2)
     registerPlayer(new_id1)
     reportMatch(123, 1, new_id1, new_id2, draw=True)
-    for i in playerStandings():
-        if i[1] != 1:
-            raise ValueError("Players with draws should have match points of 1")
+    for i in playerStandings(123):
+        print(i)
+        if i[1] != .5:
+            raise ValueError("Player with draws should have match points of .5")
     reportMatch(123, 2, new_id1, new_id2, draw=False)
-    for i in playerStandings():
+    for i in playerStandings(123):
         if i[0] == new_id1:
-            if i[1] != 4:
+            if i[1] != 1.5:
                 raise ValueError("Winner should have 3 match points, plus 1 for"
                                  "draw: total 4")
         if i[0] == new_id2:
-            if i[1] != 1:
+            if i[1] != .5:
                 raise ValueError("Loser should have 1 match point, 1 for draw"
                                  "in round 1")
 
@@ -112,10 +106,8 @@ def testReportMatch():
     [id1, id2, id3, id4] = [row[0] for row in standings]
     reportMatch(123, 1, id1, id2)
     reportMatch(123, 1, id3, id4)
-    standings = playersByWins()
-    for (i, n, w, m) in standings:
-        if m != 1:
-            raise ValueError("Each player should have one match recorded.")
+    standings = playerStandings(123)
+    for (i, w) in standings:
         if i in (id1, id3) and w != 1:
             raise ValueError("Each match winner should have one win recorded.")
         elif i in (id2, id4) and w != 0:
@@ -141,7 +133,16 @@ def createTestSet():
                registerMember("K"), registerMember("L"),
                registerMember("M"), registerMember("N"),
                registerMember("O"), registerMember("P"),
-               registerMember("Q"), registerMember("R"),]
+               registerMember("Q"), registerMember("R"),
+               registerMember("A"), registerMember("B"),
+               registerMember("C"), registerMember("D"),
+               registerMember("E"), registerMember("F"),
+               registerMember("G"), registerMember("H"),
+               registerMember("I"), registerMember("J"),
+               registerMember("K"), registerMember("L"),
+               registerMember("M"), registerMember("N"),
+               registerMember("O"), registerMember("P"),
+               registerMember("Q"), registerMember("R"),]  # 36
                # registerMember("A"), registerMember("B"),
                # registerMember("C"), registerMember("D"),
                # registerMember("E"), registerMember("F"),
@@ -159,16 +160,7 @@ def createTestSet():
                # registerMember("K"), registerMember("L"),
                # registerMember("M"), registerMember("N"),
                # registerMember("O"), registerMember("P"),
-               # registerMember("Q"), registerMember("R"),
-               # registerMember("A"), registerMember("B"),
-               # registerMember("C"), registerMember("D"),
-               # registerMember("E"), registerMember("F"),
-               # registerMember("G"), registerMember("H"),
-               # registerMember("I"), registerMember("J"),
-               # registerMember("K"), registerMember("L"),
-               # registerMember("M"), registerMember("N"),
-               # registerMember("O"), registerMember("P"),
-               # registerMember("Q"), registerMember("R"),
+               # registerMember("Q"), registerMember("R"),  # 72
                # registerMember("A"), registerMember("B"),
                # registerMember("C"), registerMember("D"),
                # registerMember("E"), registerMember("F"),
@@ -205,6 +197,84 @@ def createTestSet():
                # registerMember("M"), registerMember("N"),
                # registerMember("O"), registerMember("P"),
                # registerMember("Q"), registerMember("R")]
+    # players2 = [registerMember("A"), registerMember("B"),
+    #            registerMember("C"), registerMember("D"),
+    #            registerMember("E"), registerMember("F"),
+    #            registerMember("G"), registerMember("H"),
+    #            registerMember("I"), registerMember("J"),
+    #            registerMember("K"), registerMember("L"),
+    #            registerMember("M"), registerMember("N"),
+    #            registerMember("O"), registerMember("P"),
+    #            registerMember("Q"), registerMember("R"),
+    #            registerMember("A"), registerMember("B"),
+    #            registerMember("C"), registerMember("D"),
+    #            registerMember("E"), registerMember("F"),
+    #            registerMember("G"), registerMember("H"),
+    #            registerMember("I"), registerMember("J"),
+    #            registerMember("K"), registerMember("L"),
+    #            registerMember("M"), registerMember("N"),
+    #            registerMember("O"), registerMember("P"),
+    #            registerMember("Q"), registerMember("R"),
+    #            registerMember("A"), registerMember("B"),
+    #            registerMember("C"), registerMember("D"),
+    #            registerMember("E"), registerMember("F"),
+    #            registerMember("G"), registerMember("H"),
+    #            registerMember("I"), registerMember("J"),
+    #            registerMember("K"), registerMember("L"),
+    #            registerMember("M"), registerMember("N"),
+    #            registerMember("O"), registerMember("P"),
+    #            registerMember("Q"), registerMember("R"),
+    #            registerMember("A"), registerMember("B"),
+    #            registerMember("C"), registerMember("D"),
+    #            registerMember("E"), registerMember("F"),
+    #            registerMember("G"), registerMember("H"),
+    #            registerMember("I"), registerMember("J"),
+    #            registerMember("K"), registerMember("L"),
+    #            registerMember("M"), registerMember("N"),
+    #            registerMember("O"), registerMember("P"),
+    #            registerMember("Q"), registerMember("R"),
+    #            registerMember("A"), registerMember("B"),
+    #            registerMember("C"), registerMember("D"),
+    #            registerMember("E"), registerMember("F"),
+    #            registerMember("G"), registerMember("H"),
+    #            registerMember("I"), registerMember("J"),
+    #            registerMember("K"), registerMember("L"),
+    #            registerMember("M"), registerMember("N"),
+    #            registerMember("O"), registerMember("P"),
+    #            registerMember("Q"), registerMember("R"),
+    #            registerMember("A"), registerMember("B"),
+    #            registerMember("C"), registerMember("D"),
+    #            registerMember("E"), registerMember("F"),
+    #            registerMember("G"), registerMember("H"),
+    #            registerMember("I"), registerMember("J"),
+    #            registerMember("K"), registerMember("L"),
+    #            registerMember("M"), registerMember("N"),
+    #            registerMember("O"), registerMember("P"),
+    #            registerMember("Q"), registerMember("R"),
+    #            registerMember("A"), registerMember("B"),
+    #            registerMember("C"), registerMember("D"),
+    #            registerMember("E"), registerMember("F"),
+    #            registerMember("G"), registerMember("H"),
+    #            registerMember("I"), registerMember("J"),
+    #            registerMember("K"), registerMember("L"),
+    #            registerMember("M"), registerMember("N"),
+    #            registerMember("O"), registerMember("P"),
+    #            registerMember("Q"), registerMember("R"),
+    #            registerMember("A"), registerMember("B"),
+    #            registerMember("C"), registerMember("D"),
+    #            registerMember("E"), registerMember("F"),
+    #            registerMember("G"), registerMember("H"),
+    #            registerMember("I"), registerMember("J"),
+    #            registerMember("K"), registerMember("L"),
+    #            registerMember("M"), registerMember("N"),
+    #            registerMember("O"), registerMember("P"),
+    #            registerMember("Q"), registerMember("R")]
+    # 288
+    #players.extend(players2)
+    # 576
+    #players.extend(players2)
+    #players.extend(players2)
+
     db = connect()
     c = db.cursor()
     x = countMembers()
@@ -248,12 +318,10 @@ def runTestCase(is_new=False):
         registerPlayer(i)
 
     num_of_players = countPlayers()
-    count = 0
     rounds = int(math.ceil(math.log(num_of_players, 2)))
     for i in range(rounds):
-        count += 1
-        print("round " + str(count))
         current_round = i + 1
+        print("round " + str(current_round))
         line_up = swissPairings(tourney)
         print(line_up)
         for x in line_up:
@@ -264,9 +332,9 @@ def runTestCase(is_new=False):
     print("final scores")
     print(playerStandings(tourney))
     print("They rank :")
-    rank = 1
     rankings = playerRanks(tourney)
     print(rankings)
+    rank = 1
     for i in rankings:
         print(str(rank) + ". " + i[1] + " --ID: " + str(i[0]))
         rank += 1
@@ -286,5 +354,18 @@ def querySpeedTest(t_id):
 
 
 if __name__ == '__main__':
+    truncateAll()
+    testRegisterMember()
+    truncateAll()
+    testDeleteMembers()
+    truncateAll()
+    testAddPlayers()
+    truncateAll()
+    testDeletePlayers()
+    truncateAll()
+    testMemberStandingsBeforeMatches()
+    truncateAll()
+    testReportMatch()
+    truncateAll()
     runTestCase(True)
     print "Success!  All tests pass!"

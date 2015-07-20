@@ -8,7 +8,10 @@ import copy
 
 def connect():
     """Connect to the PostgreSQL database.  Returns a database connection."""
-    return psycopg2.connect(dbname="tournament")
+    # For development with EDB/pgAdmin setup
+    return psycopg2.connect(host="localhost", dbname="tournament",
+                            user="postgres")
+    #return psycopg2.connect(dbname="tournament")
 
 
 def truncateMembers():
@@ -40,9 +43,11 @@ def truncateMatches():
 
 def truncateAll():
     """Truncate all tables in database; matches, members, and players."""
-    truncateMatches()
-    truncatePlayers()
-    truncateMembers()
+    db = connect()
+    c = db.cursor()
+    c.execute("TRUNCATE matches, members, players")
+    db.commit()
+    db.close()
 
 
 def deleteMember(p_id):
