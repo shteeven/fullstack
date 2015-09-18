@@ -6,109 +6,88 @@
 import psycopg2
 import copy
 
-def connect():
+def connect(database_name="tournament"):
     """Connect to the PostgreSQL database.  Returns a database connection."""
     # For development with EDB/pgAdmin setup
-    return psycopg2.connect(host="localhost", dbname="tournament",
-                            user="postgres")
-    #return psycopg2.connect(dbname="tournament")
+    db = psycopg2.connect(host="localhost", dbname="tournament",
+                           user="postgres", password="postgres")
+    cursor = db.cursor()
+    return db, cursor
+    # try:
+    #     db = psycopg2.connect("dbname={}".format(database_name))
+    #     cursor = db.cursor()
+    #     return db, cursor
+    # except:
+    #     print("Failed to connect.")
 
 
-def truncateMembers():
-    """Remove all the member records from the database."""
-    db = connect()
-    c = db.cursor()
-    c.execute("TRUNCATE members")
+def deleteAll():
+    """Delete all table rows in database; matches, members, and players."""
+    db, c = connect()
+    c.execute("DELETE FROM matches")
+    c.execute("DELETE FROM players")
+    c.execute("DELETE FROM members")
     db.commit()
     db.close()
 
 
-def truncatePlayers():
-    """Remove all the player records from the players table."""
-    db = connect()
-    c = db.cursor()
-    c.execute("TRUNCATE players")
-    db.commit()
-    db.close()
-
-
-def truncateMatches():
-    """Remove all the match records from the database."""
-    db = connect()
-    c = db.cursor()
-    c.execute("TRUNCATE matches")
-    db.commit()
-    db.close()
-
-
-def truncateAll():
-    """Truncate all tables in database; matches, members, and players."""
-    db = connect()
-    c = db.cursor()
-    c.execute("TRUNCATE matches, members, players")
-    db.commit()
-    db.close()
-
-
-def deleteMember(p_id):
-    """Remove a member from the database.
+def deleteMembers(p_id=''):
+    """Remove a member from the database. If no argument is given, all members
+    are deleted.
 
     Args:
       p_id: the member's id.
     """
-    db = connect()
-    c = db.cursor()
-    c.execute("DELETE FROM members WHERE id = %s", (p_id,))
+    db, c = connect()
+    if p_id != '':
+        c.execute("DELETE FROM members WHERE id = %s", (p_id,))
+    else:
+        c.execute("DELETE FROM members")
     db.commit()
     db.close()
 
 
-def deletePlayer(p_id):
-    """Remove a player in the current tourney from the database.
+def deletePlayers(p_id=''):
+    """Remove a player in the current tourney from the database. If no arguments
+    are given, all players will be deleted.
 
     Args:
       p_id: the player's id.
     """
-    db = connect()
-    c = db.cursor()
-    c.execute("DELETE FROM players WHERE id = %s", (p_id,))
+    db, c = connect()
+    if p_id != '':
+        c.execute("DELETE FROM players WHERE id = %s", (p_id,))
+    else:
+        c.execute("DELETE FROM players")
     db.commit()
     db.close()
 
 
-def deleteMatches(t_id, m_id):
-    """Removes match records of a round from the database.
+def deleteMatches(t_id='', m_id=''):
+    """Removes match records of a round from the database. If no match id is
+    given, all matches from a tourney are deleted. If no argument is given,
+    all matches will be deleted.
 
      Args:
       t_id: the tournament id.
       m_id: the match round id.
      """
-    db = connect()
-    c = db.cursor()
-    c.execute("DELETE FROM matches "
-              "WHERE tourney_id = %s AND match_id = %s", (t_id, m_id,))
-    db.commit()
-    db.close()
-
-
-def deleteTourney(t_id):
-    """Removes a tournament's records from the database.
-
-     Args:
-      t_id: the tournament id.
-    """
-    db = connect()
-    c = db.cursor()
-    c.execute("DELETE FROM matches "
-              "WHERE tourney_id = %s", (t_id,))
+    db, c = connect()
+    if t_id != '' and m_id != '':
+        c.execute("DELETE FROM matches "
+                  "WHERE tourney_id = %s AND match_id = %s", (t_id, m_id,))
+    elif t_id != '' and m_id == '':
+        c.execute("DELETE FROM matches "
+                  "WHERE tourney_id = %s", (t_id))
+    else:
+        c.execute("DELETE FROM matches")
     db.commit()
     db.close()
 
 
 def countMembers():
     """Returns the number of members currently registered."""
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("SELECT count(*) FROM members")
     result = c.fetchone()[0]
     db.commit()
@@ -118,8 +97,7 @@ def countMembers():
 
 def countPlayers():
     """Returns the number of players currently in the tournament."""
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("SELECT count(*) FROM players")
     result = c.fetchone()[0]
     db.commit()
@@ -135,8 +113,7 @@ def registerMember(name):
 
     Returns: new member's assigned id (important for testing)
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("INSERT INTO members "
               "VALUES (DEFAULT, %s)", (name,))
     c.execute("SELECT id FROM members WHERE name = %s", (name,))
@@ -152,8 +129,7 @@ def registerPlayer(p_id):
     Args:
       p_id: the player's member id.
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("INSERT INTO players (id, name, seed_score) "
               "SELECT id, name, "
               "COALESCE(wins / NULLIF(matches,0), 0) "
@@ -177,8 +153,7 @@ def membersBySeeding():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("SELECT id, name, wins, matches,"
               "COALESCE(wins / NULLIF(matches,0), 0) AS seed_score "
               "FROM members "
@@ -202,8 +177,7 @@ def membersByWins():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("SELECT id, name, wins, matches "
               "FROM members "
               "ORDER BY wins DESC")
@@ -225,8 +199,7 @@ def playerSeedings():
         id: the player's unique id (assigned by the database)
         seed_score: the players' wins divided by total number of matches played
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("SELECT id, seed_score "
               "FROM players "
               "ORDER BY seed_score DESC")
@@ -249,8 +222,7 @@ def playersByWins():
         wins: the number of matches the player has won
         matches: the number of matches the player has played
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("SELECT id, name, wins, matches "
               "FROM players "
               "ORDER BY wins DESC")
@@ -274,8 +246,7 @@ def playerStandings(t_id):
         id: the player's unique id
         wins: the total wins of player thus far in current tourney
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("SELECT p.id, p.wins "
               "FROM players p "
               "GROUP BY p.id "
@@ -300,8 +271,7 @@ def playerRanks(t_id):
         wins: the player's win total for tournament
         omw: the opponent match wins for tournament
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("SELECT p.id, p.name, p.wins, "
               "(SELECT SUM(o.wins) FROM players o "
               "LEFT JOIN matches m "
@@ -328,8 +298,7 @@ def reportMatch(t_id, m_id, win_id, lose_id, draw=False):
       lose_id: the id number of the player who lost.
       draw: draw if True; can accept False (optional)
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     # set records with 'draw' points
     if draw is True:
         # update player 1 record
@@ -378,17 +347,16 @@ def reportMatch(t_id, m_id, win_id, lose_id, draw=False):
 
 def endTournament():
     """To be ran at the end of each tournament. This function updates member
-    data with data from players table, and then truncates the players table.
+    data with data from players table, and then clears the players table.
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("UPDATE members m "
               "SET wins = p.wins + m.wins, matches = p.matches + m.matches "
               "FROM players p "
               "WHERE m.id = p.id")
     db.commit()
     db.close()
-    truncatePlayers()
+    deletePlayers()
     print("EoT. Members' records updated and players table cleared.")
 
 
@@ -411,8 +379,7 @@ def swissPairings(t_id):
         id2: the second player's unique id
         diff: the absolute difference in players' match points
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("SELECT * "
               "FROM matches "
               "WHERE tourney_id = %s", (t_id,))
@@ -423,8 +390,7 @@ def swissPairings(t_id):
     if in_progress == None:
         # initial pairings
         if num_of_players % 2 != 0:
-            db = connect()
-            c = db.cursor()
+            db, c = connect()
             c.execute("INSERT INTO players (id, name, seed_score) "
                       "VALUES (2147483647, 'BYE', 0)")
             db.commit()
@@ -459,8 +425,7 @@ def remainingOpponents(t_id, p_id):
         opponent_id: the opponent's unique id (assigned by the database)
         diff: absolute difference in win totals
     """
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("SELECT p.id, o.id, ABS(p.wins - o.wins) AS diff "
               "FROM players p, players o "
               "WHERE p.id = %s AND o.id != p.id AND o.id NOT IN "
