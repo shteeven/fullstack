@@ -21,7 +21,7 @@ def testRegisterMember():
 def testDeleteMembers():
     member_count = countMembers()
     new_id = testRegisterMember()
-    deleteMember(new_id)
+    deleteMembers(new_id)
     if member_count != countMembers():
         raise ValueError(
             "Member count should be identical to previous member count")
@@ -45,7 +45,7 @@ def testAddPlayers():
 def testDeletePlayers():
     new_id = testAddPlayers()
     player_count = countPlayers()
-    deletePlayer(new_id)
+    deletePlayers(new_id)
     if countPlayers() == player_count:
         raise ValueError("Player count should be minus one of previous count")
     elif countPlayers() == player_count - 1:
@@ -97,7 +97,7 @@ def testReportMatch():
                 raise ValueError("Loser should have 1 match point, 1 for draw"
                                  "in round 1")
 
-    truncateAll()
+    deleteAll()
     players = [registerMember("Bruno Walton"), registerMember("Boots O'Neal"),
                registerMember("Cathy Burton"), registerMember("Diane Grant")]
     for i in players:
@@ -124,7 +124,7 @@ def createTestSet():
     but with opponents opposite ends of that bracket, thereby saving the
     most even matches for last.
     """
-    truncateAll()
+    deleteAll()
     players = [registerMember("A"), registerMember("B"),
                registerMember("C"), registerMember("D"),
                registerMember("E"), registerMember("F"),
@@ -275,8 +275,7 @@ def createTestSet():
     #players.extend(players2)
     #players.extend(players2)
 
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     x = countMembers()
     y = countMembers()
     for i in players:
@@ -299,9 +298,8 @@ def runTestCase(is_new=False):
         createTestSet()
         tourney = 1
     else:
-        truncatePlayers()
-        db = connect()
-        c = db.cursor()
+        deletePlayers()
+        db, c = connect()
         c.execute("SELECT tourney_id "
                   "FROM matches "
                   "GROUP BY tourney_id "
@@ -342,8 +340,7 @@ def runTestCase(is_new=False):
 
 
 def querySpeedTest(t_id):
-    db = connect()
-    c = db.cursor()
+    db, c = connect()
     c.execute("select tourney_id "
               "from matches WHERE tourney_id = %s "
               "LIMIT 1", (t_id,))
@@ -354,18 +351,18 @@ def querySpeedTest(t_id):
 
 
 if __name__ == '__main__':
-    truncateAll()
+    deleteAll()
     testRegisterMember()
-    truncateAll()
+    deleteAll()
     testDeleteMembers()
-    truncateAll()
+    deleteAll()
     testAddPlayers()
-    truncateAll()
+    deleteAll()
     testDeletePlayers()
-    truncateAll()
+    deleteAll()
     testMemberStandingsBeforeMatches()
-    truncateAll()
+    deleteAll()
     testReportMatch()
-    truncateAll()
+    deleteAll()
     runTestCase(True)
     print "Success!  All tests pass!"

@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+<body>
+    <section class="pane">
+        <h1 class="header">Yelp!</h1>
+
+        <!--MESSAGE FLASHING EXAMPLE -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li><strong>{{message}}</strong></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        {% endwith %}
+
+        <a href="{{url_for('newRestaurant')}}">
+            Add a restaurant.
+        </a>
+        <br>
+        <br>
+
+        {% for i in restaurants %}
+        <div class="item">
+            <h3 class="name">
+                <a href="{{url_for('showMenu', restaurant_id=i.id)}}">
+                    {{i.name}}
+                </a>
+            </h3>
+            <a href="{{url_for('editRestaurant', restaurant_id=i.id)}}">edit</a>
+            <a href="{{url_for('deleteRestaurant', restaurant_id=i.id)}}">delete</a>
+        </div>
+        <br>
+        {% endfor %}
+    </section>
+</body>
+</html>

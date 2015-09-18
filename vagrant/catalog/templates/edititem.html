@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% block content %}
+	<div class="row divider green">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner menu">
+		<div class="col-md-11 col-md-offset-1 padding-none">
+			<h1>Edit Item</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-1 padding-top">
+			<form action="#" method = "post">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input id="name" type ="text" maxlength="100" class="form-control" name="name" value="{{ item.name }}">
+					<label for="description">Description:</label>
+					<textarea id="description" class="form-control" maxlength="250" rows="3" name="description">{{ item.description }}</textarea>
+					<label for="img_url">Image URL: </label>
+        	<input id="img_url" maxlength="1800" type="text" class="form-control" name="img_url" value="{{ item.img_url }}">
+					<button type="submit" class="btn btn-default" id="submit" type="submit">
+						<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save
+					</button>
+          <a class="btn btn-default cancel" href="{{url_for('showItem', category_id=item.category_id, item_id=item.id)}}">
+					  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel
+			    </a>
+				</div>
+			</form>
+
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+<html>
+<body>
+
+<h1>Edit Menu Item: <em>{{item.name}}</em></h1>
+
+<form action="{{url_for('editMenuItem', restaurant_id=item.restaurant_id, menu_id=item.id)}}"
+      method="POST">
+
+    <p>Name: <input type="text" size="30" name="name" value="{{item.name}}"></p>
+
+    <p>Price: <input type="text" size="7" name="price" value="{{item.price}}"></p>
+
+    <p>Description: <input type="text" name="description" value="{{item.description}}"></p>
+
+    <p>
+        Course:
+        <fieldset id="course">
+            <input id="Entree" type="radio" value="Entree" name="course" {>
+            <label for="Entree">Entree</label>
+            <input id="Appetizer" type="radio" value="Appetizer" name="course">
+            <label for="Appetizer">Appetizer</label>
+            <input id="Dessert" type="radio" value="Dessert" name="course">
+            <label for="Dessert">Dessert</label>
+            <input id="Beverage" type="radio" value="Beverage" name="course">
+            <label for="Beverage">Beverage</label>
+        </fieldset>
+    </p>
+
+    <br>
+    <input type="submit" value="Update">
+
+</form>
+
+<a href="{{url_for('showMenu', restaurant_id=item.restaurant_id)}}">
+    <--- Go back.
+</a>
+
+</body>
+</html>

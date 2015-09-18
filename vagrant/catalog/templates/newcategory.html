@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% block content %}
+
+<div class="row banner main">
+		<div class="col-md-1"></div>
+		<div class="col-md-11 padding-none">
+			<h1>New Category</h1>
+		</div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-1 padding-none">
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Name: </label>
+        <input id="name" type="text" maxlength="100" class="form-control" name="name"/>
+        <label for="img_url">Image URL: </label>
+        <input id="img_url" maxlength="1800" type="text" class="form-control" name="img_url"/>
+        <div class="padding-bottom"></div>
+        <button class="btn btn-default" id="submit" type="submit">
+          <span class="glyphicon glyphicon-list-alt"></span> Create
+        </button>
+        <a class="btn btn-default cancel" href="{{url_for('showCategories')}}">
+          <span class="glyphicon glyphicon-remove"></span> Cancel
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
