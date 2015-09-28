@@ -33,14 +33,24 @@
   <div class="col-md-1"></div>
 </div>
 {% for category in categories %}
-<a href = "{{url_for('showItems', category_id=category.id)}}">
+
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10 category-list">
-      <h3>{{category.name}}</h3>
+
+      <div class="col-md-2">
+        <img class="pull-right img-responsive" src="{{ category.img_url }}" alt="{{ category.name }} image.">
+      </div>
+
+      <div class="col-md-10">
+        <a href = "{{url_for('showItems', category_id=category.id)}}">
+          <h3>{{category.name}}</h3>
+        </a>
+      </div>
+
     </div>
     <div class="col-md-1"></div>
   </div>
-</a>
+
 {% endfor %}
 {% endblock %}

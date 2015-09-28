@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 apt-get -qqy update
 apt-get -qqy install postgresql python-psycopg2
 apt-get -qqy install python-flask python-sqlalchemy
@@ -15,9 +16,9 @@ su vagrant -c 'createdb'
 su vagrant -c 'createdb forum'
 su vagrant -c 'psql forum -f /vagrant/forum/forum.sql'
 su vagrant -c 'createdb tournament'
-su vagrant -c 'psql forum -f /vagrant/tournament/tournament.sql'
+su vagrant -c 'psql tournament -f /vagrant/tournament/tournament.sql'
 su vagrant -c 'createdb restaurant'
-su vagrant -c 'psql forum -f /vagrant/restaurant/restaurant.sql'
+su vagrant -c 'psql restaurant -f /vagrant/restaurant/restaurant.sql'
 
 vagrantTip="[35m[1mThe shared directory is located at /vagrant\nTo access your shared files: cd /vagrant(B[m"
 echo -e $vagrantTip > /etc/motd

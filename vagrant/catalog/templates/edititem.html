@@ -1,5 +1,6 @@
 {% extends "main.html" %}
 {% block content %}
+
 	<div class="row divider green">
 		<div class="col-md-12"></div>
 	</div>
@@ -8,10 +9,24 @@
 			<h1>Edit Item</h1>
 		</div>
 	</div>
+
+  <div class='flash'>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul>
+    {% for message in messages %}
+    <li> <strong> {{ message }} </strong> </li>
+    {% endfor %}
+  </ul>
+	{% endif %}
+	{% endwith %}
+  </div>
+
 	<div class="row">
 		<div class="col-md-6 col-md-offset-1 padding-top">
 			<form action="#" method = "post">
 				<div class="form-group">
+          <input name=_csrf_token type=hidden value="{{ csrf_token() }}">
 					<label for="name">Name:</label>
 					<input id="name" type ="text" maxlength="100" class="form-control" name="name" value="{{ item.name }}">
 					<label for="description">Description:</label>

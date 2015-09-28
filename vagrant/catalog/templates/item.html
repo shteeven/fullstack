@@ -9,7 +9,7 @@
   </div>
 </div>
 
-<div class='flash'>
+  <div class='flash'>
   {% with messages = get_flashed_messages() %}
   {% if messages %}
   <ul>
@@ -20,6 +20,7 @@
 	{% endif %}
 	{% endwith %}
 </div>
+
 
 <div class="row padding-top padding-bottom">
   <div class="col-md-1"></div>
@@ -43,10 +44,20 @@
 <div class="row">
   <div class="col-md-1"></div>
   <div class="col-md-10 category-list">
-    <h3>{{item.name}}</h3>
-    <p>{{item.description}}</p>
-    <p>A WIKI ARTICLE OR ADDITIONAL INFO WILL GO HERE</p>
-    <a href="wikipedia.org">Link to outside aritcle.</a>
+    <div class="row">
+
+      <div class="col-md-2">
+        <img class="pull-right img-responsive" src="{{ item.img_url }}" alt="{{ item.name }} image.">
+      </div>
+
+      <div class="col-md-10">
+        <h3>{{item.name}}</h3>
+        <p>{{item.description}}</p>
+        <p>A WIKI ARTICLE OR ADDITIONAL INFO WILL GO HERE</p>
+        <a href="wikipedia.org">Link to outside aritcle.</a>
+      </div>
+
+    </div>
   </div>
   <div class="col-md-1"></div>
 </div>
