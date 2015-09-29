@@ -5,8 +5,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oauth/facebook_client_secrets.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oauth/templates/publicmenu.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oauth/templates/publicrestaurants.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/templates/publiccategories.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/catalog/templates/publicitems.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/oauth/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/oauth/.idea/dbnavigator.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/oauth/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
@@ -26,37 +24,18 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/oauth/.vagrant/machines/default/virtualbox/synced_folders" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/oauth/Vagrantfile" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/oauth/pg_config.sh" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/catalog.db" afterPath="$PROJECT_DIR$/catalog/catalog.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth" afterPath="$PROJECT_DIR$/oauth" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth/restaurantmenuwithusers.db" afterPath="$PROJECT_DIR$/oauth/restaurantmenuwithusers.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/application.py" afterPath="$PROJECT_DIR$/catalog/application.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/templates/categories.html" afterPath="$PROJECT_DIR$/catalog/templates/categories.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth/database_setup.py" afterPath="$PROJECT_DIR$/oauth/database_setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/templates/deletecategory.html" afterPath="$PROJECT_DIR$/catalog/templates/deletecategory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/templates/deleteitem.html" afterPath="$PROJECT_DIR$/catalog/templates/deleteitem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/templates/editcategory.html" afterPath="$PROJECT_DIR$/catalog/templates/editcategory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/templates/edititem.html" afterPath="$PROJECT_DIR$/catalog/templates/edititem.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth/templates/header.html" afterPath="$PROJECT_DIR$/oauth/templates/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/templates/item.html" afterPath="$PROJECT_DIR$/catalog/templates/item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/templates/items.html" afterPath="$PROJECT_DIR$/catalog/templates/items.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth/templates/login.html" afterPath="$PROJECT_DIR$/oauth/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/static/main.css" afterPath="$PROJECT_DIR$/catalog/static/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/templates/main.html" afterPath="$PROJECT_DIR$/catalog/templates/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth/templates/main.html" afterPath="$PROJECT_DIR$/oauth/templates/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth/templates/menu.html" afterPath="$PROJECT_DIR$/oauth/templates/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth/templates/newRestaurant.html" afterPath="$PROJECT_DIR$/oauth/templates/newRestaurant.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/templates/newcategory.html" afterPath="$PROJECT_DIR$/catalog/templates/newcategory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalog/templates/newitem.html" afterPath="$PROJECT_DIR$/catalog/templates/newitem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pg_config.sh" afterPath="$PROJECT_DIR$/pg_config.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth/project.py" afterPath="$PROJECT_DIR$/oauth/project.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oauth/templates/restaurants.html" afterPath="$PROJECT_DIR$/oauth/templates/restaurants.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/test.py" afterPath="$PROJECT_DIR$/tournament/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tournament/tournament.py" afterPath="$PROJECT_DIR$/tournament/tournament.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vagrant.iml" afterPath="$PROJECT_DIR$/.idea/vagrant.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vagrant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -503,14 +482,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28630137" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18336026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18336026" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
