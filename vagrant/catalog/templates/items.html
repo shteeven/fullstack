@@ -32,12 +32,20 @@
       <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Back
     </a>
     {% if logged %}
+<<<<<<< HEAD
     {% if creator.is_user %}
         <a href="{{url_for('newItem', category_id=category.id)}}">
+=======
+    <a href="{{url_for('newItem', category_id=category.id)}}">
+>>>>>>> 52f249d30d6685ce01437e3af38f282cb6a47ffe
       <button class="btn btn-success" id="new-category">
         <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Add Item
       </button>
     </a>
+<<<<<<< HEAD
+=======
+    {% if creator.is_user %}
+>>>>>>> 52f249d30d6685ce01437e3af38f282cb6a47ffe
     <a href="{{url_for('editCategory', category_id=category.id)}}">
       <button class="btn btn-primary" id="edit-category">
         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit Category
@@ -59,6 +67,7 @@
 <div class="row">
   <div class="col-md-1"></div>
   <div class="col-md-10 category-list">
+<<<<<<< HEAD
     <div class="row">
 
       <div class="col-md-2">
@@ -74,6 +83,13 @@
       </div>
 
     </div>
+=======
+    <a href = "{{url_for('showItem', item_id=item.id, category_id=category.id)}}">
+      <h3>{{item.name}}</h3>
+    </a>
+    <p>{{item.description}}</p>
+    <a href="{{url_for('showItem', item_id=item.id, category_id=category.id)}}">Read more.</a>
+>>>>>>> 52f249d30d6685ce01437e3af38f282cb6a47ffe
   </div>
   <div class="col-md-1"></div>
 </div>

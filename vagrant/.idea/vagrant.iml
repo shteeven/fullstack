@@ -2,7 +2,11 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
+<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Remote Python 2.7.6 (ssh://vagrant@127.0.0.1:2222/usr/bin/python)" jdkType="Python SDK" />
+=======
+    <orderEntry type="jdk" jdkName="Remote Python 2.7.6 (ssh://vagrant@127.0.0.1:2222/usr/bin/python) (2)" jdkType="Python SDK" />
+>>>>>>> 52f249d30d6685ce01437e3af38f282cb6a47ffe
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
