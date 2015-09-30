@@ -2,4 +2,3 @@ restaurant/venv/**
 .DS_Store
 .idea/
 .vagrant/
-restaurant/venv/**
